@@ -8,13 +8,13 @@ const Hero: React.FC = () => {
       <div className="max-w-none mx-auto">
         <div className="relative">
           {/* Full-width image container */}
-          <div className="relative w-full" style={{ height: 'calc(100vh - 200px)' }}>
+          <div className="relative w-full" style={{ height: 'calc(100vh - 100px)' }}>
             <div className="absolute inset-0">
               <Image
                 src="/images/Tess_Hero.png"
                 alt="Dr. Teresa Flanagan presenting her research on children's interaction with digital technologies"
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'left center' }}
+                style={{ objectFit: 'cover', objectPosition: 'center center' }}
                 loading="eager"
                 className="w-full"
               />
