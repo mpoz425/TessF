@@ -58,6 +58,6 @@
 /* Ensure hero image face is visible on mobile */
 @media (max-width: 640px) {
   .hero-image {
-    object-position: center 5% !important;
+    object-position: center 20% !important;
   }
 }
