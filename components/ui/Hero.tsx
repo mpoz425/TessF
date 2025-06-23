@@ -2,7 +2,20 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+const useMobile = () => {
+  const [isMobile, setIsMobile] = React.useState(false);
+  React.useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 640);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+  return isMobile;
+};
+
 const Hero: React.FC = () => {
+  const isMobile = useMobile();
+
   return (
     <div className="relative overflow-hidden bg-content-gradient">
       <div className="max-w-none mx-auto">
@@ -14,7 +27,10 @@ const Hero: React.FC = () => {
                 src="/images/Tess_Hero.png"
                 alt="Dr. Teresa Flanagan presenting her research on children's interaction with digital technologies"
                 fill
-                style={{ objectFit: 'cover' }}
+                style={{
+                  objectFit: 'cover',
+                  objectPosition: isMobile ? 'center 20%' : 'center center',
+                }}
                 loading="eager"
                 className="w-full hero-image"
               />
