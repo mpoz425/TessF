@@ -41,6 +41,6 @@ export function getPublicationsByYear(): Record<string, Publication[]> {
 }
 
 export function getYearsSorted(): string[] {
-  const years = [...new Set((publicationsData as PublicationsData).publications.map(pub => pub.year))];
+  const years = Array.from(new Set((publicationsData as PublicationsData).publications.map(pub => pub.year)));
   return years.sort((a, b) => parseInt(b) - parseInt(a));
 } 
