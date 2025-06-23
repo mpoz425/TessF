@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply text-gray-900;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white/80 backdrop-blur-sm rounded-lg shadow-sm border border-gray-200/50 
+           hover:shadow-md transition-shadow duration-200 
+           hover:border-softBlue-200/50;
+  }
+
+  .section-bg {
+    @apply bg-white/60 backdrop-blur-sm rounded-lg shadow-sm;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center px-6 py-3 border border-transparent 
+           text-base font-medium rounded-md shadow-sm text-white
+           bg-gradient-to-r from-softBlue-500 to-softBlue-600
+           hover:from-softBlue-600 hover:to-softBlue-700
+           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-softBlue-500 
+           transition-all duration-200;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center px-6 py-3 border border-transparent
+           text-base font-medium rounded-md text-softBlue-700
+           bg-gradient-to-r from-softBlue-50 to-softBlue-100
+           hover:from-softBlue-100 hover:to-softBlue-200
+           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-softBlue-500
+           transition-all duration-200;
+  }
+}
+
+/* Custom background gradients */
+.bg-soft-gradient {
+  @apply bg-gradient-to-br from-softPink-50 via-white to-softBlue-50;
+}
+
+.bg-content-gradient {
+  @apply bg-gradient-to-r from-white/80 to-white/60 backdrop-blur-sm;
+}

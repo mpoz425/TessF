@@ -1,0 +1,136 @@
+{
+  "publications": [
+    {
+      "id": 1,
+      "title": "Children's Developing Beliefs About Agency and Free Will in an Increasingly Technological World",
+      "authors": "T Flanagan, T Kushnir",
+      "year": "2022",
+      "journal": "Humana mente",
+      "link": "",
+      "cites": "2",
+      "type": "journal",
+      "abstract": "A study examining how children develop beliefs about agency and free will in the context of modern technology."
+    },
+    {
+      "id": 2,
+      "title": "Children's Generalization of Preferences, Causal Functions, and Norms",
+      "authors": "TM Flanagan, X Zhao, T Kushnir",
+      "year": "2020",
+      "journal": "OSF",
+      "link": "",
+      "cites": "",
+      "type": "preprint",
+      "abstract": "Research investigating how children generalize different types of information across social and causal domains."
+    },
+    {
+      "id": 3,
+      "title": "Constrained choice: Children's and adults' attribution of choice to a humanoid robot",
+      "authors": "T Flanagan, J Rottman, LH Howard",
+      "year": "2021",
+      "journal": "Cognitive Science",
+      "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7100442379266116248",
+      "cites": "17",
+      "type": "journal",
+      "abstract": "An investigation into how children and adults understand and attribute choice capabilities to humanoid robots."
+    },
+    {
+      "id": 4,
+      "title": "Do Children Ascribe the Ability to Choose to Humanoid Robots?",
+      "authors": "T Flanagan, J Rottman, L Howard",
+      "year": "2019",
+      "journal": "CogSci",
+      "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=12273252727741931696",
+      "cites": "1",
+      "type": "conference",
+      "abstract": "A conference presentation examining children's attribution of choice abilities to humanoid robots."
+    },
+    {
+      "id": 6,
+      "title": "Individual differences in fluency with idea generation predict children's beliefs in their own free will",
+      "authors": "T Flanagan, T Kushnir",
+      "year": "2019",
+      "journal": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+      "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=7977703319266601142",
+      "cites": "2",
+      "type": "conference",
+      "abstract": "Research exploring the relationship between children's creative thinking abilities and their beliefs about free will."
+    },
+    {
+      "id": 7,
+      "title": "Is it personal or is it social? The interaction of knowledge domain and statistical evidence in US and Chinese preschoolers' social generalizations.",
+      "authors": "T Flanagan, XA Zhao, F Xu, T Kushnir",
+      "year": "2024",
+      "journal": "Journal of Experimental Psychology: General",
+      "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=1348702861040088195",
+      "cites": "1",
+      "type": "journal",
+      "abstract": "A cross-cultural study examining how preschoolers from different cultures use statistical evidence in social learning."
+    },
+    {
+      "id": 8,
+      "title": "Must there be an explanation? Children and the Principle of Sufficient Reason",
+      "authors": "T Flanagan, A Vesga, T Kushnir, S Nichols",
+      "year": "2023",
+      "journal": "Proceedings of the Annual Meeting of the Cognitive Science Society",
+      "link": "",
+      "cites": "",
+      "type": "conference",
+      "abstract": "An investigation into children's understanding of causality and their beliefs about the necessity of explanations."
+    },
+    {
+      "id": 9,
+      "title": "Robot_Agency",
+      "authors": "TM Flanagan, G Wong",
+      "year": "2019",
+      "journal": "OSF",
+      "link": "",
+      "cites": "",
+      "type": "preprint",
+      "abstract": "Research examining how people understand and attribute agency to robotic agents."
+    },
+    {
+      "id": 10,
+      "title": "School-age children are more skeptical of inaccurate robots than adults",
+      "authors": "T Flanagan, NC Georgiou, B Scassellati, T Kushnir",
+      "year": "2024",
+      "journal": "Cognition",
+      "link": "",
+      "cites": "",
+      "type": "journal",
+      "abstract": "A study comparing children's and adults' trust in robots when presented with inaccurate information."
+    },
+    {
+      "id": 11,
+      "title": "The Community-Engaged Lab: A Case-Study Introduction for Developmental Science",
+      "authors": "J Liu, S Partington, Y Suh, Z Finiasz, T Flanagan, D Kocher, R Kiely, ...",
+      "year": "2021",
+      "journal": "Frontiers in psychology",
+      "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=14199576379519545919",
+      "cites": "2",
+      "type": "journal",
+      "abstract": "A case study examining the implementation and benefits of community engagement in developmental science research."
+    },
+    {
+      "id": 12,
+      "title": "The minds of machines: Children's beliefs about the experiences, thoughts, and morals of familiar interactive technologies.",
+      "authors": "T Flanagan, G Wong, T Kushnir",
+      "year": "2023",
+      "journal": "Developmental Psychology",
+      "link": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=10219708750852172872",
+      "cites": "24",
+      "type": "journal",
+      "abstract": "An investigation into how children conceptualize and attribute mental states to interactive technologies."
+    },
+    {
+      "id": 13,
+      "title": "What will the robot do?: A psychological, philosophical, and technological study on children's attribution of free will",
+      "authors": "T Flanagan",
+      "year": "2018",
+      "journal": "",
+      "link": "",
+      "cites": "",
+      "type": "thesis",
+      "abstract": "An honors thesis investigating children's understanding and attribution of free will to robotic agents."
+    }
+  ]
+} 
