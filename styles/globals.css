@@ -54,3 +54,10 @@
 .bg-content-gradient {
   @apply bg-gradient-to-r from-white/80 to-white/60 backdrop-blur-sm;
 }
+
+/* Ensure hero image face is visible on mobile */
+@media (max-width: 640px) {
+  .hero-image {
+    object-position: center 5% !important;
+  }
+}

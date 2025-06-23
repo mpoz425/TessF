@@ -14,9 +14,9 @@ const Hero: React.FC = () => {
                 src="/images/Tess_Hero.png"
                 alt="Dr. Teresa Flanagan presenting her research on children's interaction with digital technologies"
                 fill
-                style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
+                style={{ objectFit: 'cover' }}
                 loading="eager"
-                className="w-full"
+                className="w-full hero-image"
               />
             </div>
             
