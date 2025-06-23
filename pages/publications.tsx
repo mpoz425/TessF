@@ -11,20 +11,20 @@ const Publications: React.FC = () => {
       title="Research Publications - Child-Robot Interaction Studies"
       description="Browse through Dr. Flanagan's academic publications on child-robot interaction and developmental psychology"
     >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl">Publications</h1>
-          <p className="mt-4 text-lg text-gray-600">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+        <div className="mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl">Publications</h1>
+          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-600">
             My research has been published in leading journals and conferences in developmental psychology, 
             human-robot interaction, and cognitive science. Below you'll find my recent publications, 
             with a focus on child development, interactive technologies, and research methodologies.
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           <div className="prose max-w-none">
-            <h2 className="text-2xl font-semibold text-gray-900">Recent Publications</h2>
-            <p className="text-gray-600">
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-900">Recent Publications</h2>
+            <p className="text-sm sm:text-base text-gray-600">
               For a complete list of publications or to request access to any papers, 
               please feel free to contact me.
             </p>
