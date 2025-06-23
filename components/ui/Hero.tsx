@@ -21,7 +21,13 @@ const Hero: React.FC = () => {
       <div className="max-w-none mx-auto">
         <div className="relative">
           {/* Full-width image container */}
-          <div className="relative w-full" style={{ height: 'calc(100vh - 100px)' }}>
+          <div
+            className="relative w-full"
+            style={{
+              height: isMobile ? 'calc(100vh - 40px)' : 'calc(100vh - 100px)',
+              minHeight: isMobile ? 400 : undefined,
+            }}
+          >
             <div className="absolute inset-0">
               <Image
                 src="/images/Tess_Hero.png"
@@ -29,7 +35,7 @@ const Hero: React.FC = () => {
                 fill
                 style={{
                   objectFit: 'cover',
-                  objectPosition: isMobile ? 'center 20%' : 'center center',
+                  objectPosition: isMobile ? 'center 0%' : 'center center',
                 }}
                 loading="eager"
                 className="w-full hero-image"
