@@ -67,7 +67,7 @@ export const positions: TimelineEntry[] = [
     location: 'Chicago, IL',
     period: 'Sept 2024 — Present',
     detail: [
-      'Human–Robot Interaction Lab with Dr. Sarah Sebo',
+      'SEBO Lab with Dr. Sarah Sebo',
       'Child–robot interaction, social development, and robot trust',
     ],
     href: 'https://datascience.uchicago.edu/people/teresa-flanagan/',
@@ -151,7 +151,7 @@ export const teaching = [
 ];
 
 export const mentorship = [
-  'Undergraduate and master’s researchers in the UChicago Human–Robot Interaction Lab, working on study design, robot scripting, and analysis',
+  'Undergraduate and master’s researchers in the SEBO Lab at UChicago, working on study design, robot scripting, and analysis',
   'Research assistants at Cornell’s Early Childhood Cognition Lab, across museum, laboratory, and online data collection',
   'First-generation and underrepresented students thinking through research experience and graduate applications',
 ];
@@ -198,7 +198,7 @@ export const news: NewsItem[] = [
   },
   {
     date: 'Sept 2024',
-    body: 'I joined the Data Science Institute at the University of Chicago as a postdoctoral scholar, working in Sarah Sebo’s Human–Robot Interaction Lab.',
+    body: 'I joined the Data Science Institute at the University of Chicago as a postdoctoral scholar, working in the SEBO Lab with Sarah Sebo.',
     href: 'https://datascience.uchicago.edu/people/teresa-flanagan/',
   },
 ];

@@ -11,7 +11,7 @@ export default function ResearchPreview() {
         <SectionHeading
           eyebrow="Research"
           title="The questions I keep returning to"
-          lede="Children are forming beliefs about the technologies around them rather more quickly than developmental science has managed to document, and the areas below describe where I have concentrated that work."
+          lede="Children and adults alike are forming beliefs about the technologies around them rather more quickly than developmental science has managed to document, and the areas below describe where I have concentrated that work."
           action={{ label: 'All research areas', href: '/research' }}
         />
 
