@@ -146,6 +146,16 @@
   @apply animate-reveal-up;
 }
 
+/*
+ * Failsafe from the bootstrap script in _document. If the observer never takes
+ * over, content must not stay invisible; it appears without the animation.
+ * Declared last so it wins over the rules above.
+ */
+.js.reveal-failsafe [data-reveal] {
+  opacity: 1;
+  animation: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .js [data-reveal],
   .js [data-reveal].is-visible {
