@@ -11,7 +11,7 @@ const Contact: NextPage = () => (
     title="Contact"
     description="Get in touch with Tess Flanagan about research, collaborations, talks, or taking part in a study."
   >
-    <PageHeader eyebrow="Contact" title="Contact" lede="Email is the best way to reach me.">
+    <PageHeader title="Contact" lede="Email is the best way to reach me.">
       <a href={`mailto:${site.email}`} className="btn-primary text-base">
         <Icon name="email" className="h-4 w-4" />
         {site.email}

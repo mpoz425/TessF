@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 type PageHeaderProps = {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   lede?: string;
   /** Optional photo shown alongside the heading on wide screens. */
@@ -19,11 +19,13 @@ type PageHeaderProps = {
 export default function PageHeader({ eyebrow, title, lede, figure, children }: PageHeaderProps) {
   const heading = (
     <>
-      <p className="eyebrow" data-reveal>
-        {eyebrow}
-      </p>
+      {eyebrow && (
+        <p className="eyebrow" data-reveal>
+          {eyebrow}
+        </p>
+      )}
       <h1
-        className="mt-4 max-w-4xl text-display-sm font-semibold sm:text-display"
+        className={`max-w-4xl text-display-sm font-semibold sm:text-display ${eyebrow ? 'mt-4' : ''}`}
         data-reveal
         data-reveal-delay="60"
       >
