@@ -57,27 +57,42 @@ export default function Header() {
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-7 md:flex">
-          {nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              aria-current={isActive(item.href) ? 'page' : undefined}
-              className={`relative py-1 text-sm transition-colors ${
-                isActive(item.href) ? 'text-ink' : 'text-ink-mute hover:text-ink'
-              }`}
-            >
-              {item.name}
-              <span
-                aria-hidden="true"
-                className={`absolute inset-x-0 -bottom-0.5 h-px origin-left bg-clay transition-transform duration-300 ${
-                  isActive(item.href) ? 'scale-x-100' : 'scale-x-0'
-                }`}
-              />
-            </Link>
-          ))}
-          <a href={`mailto:${site.email}`} className="btn-primary">
-            Get in touch
-          </a>
+          {nav.map((item) => {
+            const className = `relative py-1 text-sm transition-colors ${
+              isActive(item.href) ? 'text-ink' : 'text-ink-mute hover:text-ink'
+            }`;
+
+            if (item.external) {
+              return (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={className}
+                >
+                  {item.name}
+                </a>
+              );
+            }
+
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={isActive(item.href) ? 'page' : undefined}
+                className={className}
+              >
+                {item.name}
+                <span
+                  aria-hidden="true"
+                  className={`absolute inset-x-0 -bottom-0.5 h-px origin-left bg-clay transition-transform duration-300 ${
+                    isActive(item.href) ? 'scale-x-100' : 'scale-x-0'
+                  }`}
+                />
+              </Link>
+            );
+          })}
         </nav>
 
         <button
@@ -98,22 +113,38 @@ export default function Header() {
         className="border-t border-rule bg-paper md:hidden"
       >
         <nav aria-label="Primary (mobile)" className="shell flex flex-col py-3">
-          {nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              aria-current={isActive(item.href) ? 'page' : undefined}
-              className={`flex items-center justify-between border-b border-rule/60 py-3.5 text-base transition-colors last:border-0 ${
-                isActive(item.href) ? 'text-clay' : 'text-ink'
-              }`}
-            >
-              {item.name}
-              <Icon name="arrow-right" className="h-4 w-4 text-ink-faint" />
-            </Link>
-          ))}
-          <a href={`mailto:${site.email}`} className="btn-primary mt-4 w-full">
-            Get in touch
-          </a>
+          {nav.map((item) => {
+            const className = `flex items-center justify-between border-b border-rule/60 py-3.5 text-base transition-colors last:border-0 ${
+              isActive(item.href) ? 'text-clay' : 'text-ink'
+            }`;
+
+            if (item.external) {
+              return (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={className}
+                >
+                  {item.name}
+                  <Icon name="arrow-up-right" className="h-4 w-4 text-ink-faint" />
+                </a>
+              );
+            }
+
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={isActive(item.href) ? 'page' : undefined}
+                className={className}
+              >
+                {item.name}
+                <Icon name="arrow-right" className="h-4 w-4 text-ink-faint" />
+              </Link>
+            );
+          })}
         </nav>
       </div>
     </header>

@@ -2,10 +2,9 @@ import React from 'react';
 import type { NextPage } from 'next';
 import Layout from '../components/layout/Layout';
 import PageHeader from '../components/ui/PageHeader';
-import ContactCta from '../components/ui/ContactCta';
-import PublicationEntry from '../components/ui/PublicationEntry';
+import PublicationEntry, { Authors } from '../components/ui/PublicationEntry';
 import { researchThemes } from '../data/content';
-import { publications, type Publication } from '../data/publications';
+import { inProgress, publications, type Publication } from '../data/publications';
 
 const byId = new Map(publications.map((p) => [p.id, p]));
 
@@ -25,6 +24,13 @@ const Research: NextPage = () => (
       eyebrow="Research"
       title="What we think of machines and how we engage with them"
       lede="We are surrounded by interactive technologies that look, move, and act like agents. My work looks at how we think of and engage with these technologies as agents."
+      figure={{
+        src: '/images/tess-museum-aibo.jpg',
+        alt: 'Tess running a study with a child and a robot dog at a science museum',
+        width: 185,
+        height: 123,
+        caption: 'Collecting data in the field',
+      }}
     >
       <nav aria-label="Research areas" className="flex flex-wrap gap-2">
         {researchThemes.map((theme) => (
@@ -88,7 +94,27 @@ const Research: NextPage = () => (
       );
     })}
 
-    <ContactCta />
+    <section className="section">
+      <div className="shell">
+        <div className="rule-heading" data-reveal>
+          <span className="eyebrow">Forthcoming</span>
+        </div>
+        <h2 className="mt-5 text-3xl font-semibold sm:text-4xl" data-reveal data-reveal-delay="60">
+          Under review and in preparation
+        </h2>
+        <ul className="mt-9 border-t border-rule">
+          {inProgress.map((item, i) => (
+            <li key={item.title} className="border-b border-rule py-5" data-reveal data-reveal-delay={i * 50}>
+              <p className="font-mono text-xs uppercase tracking-wider text-ink-faint">{item.status}</p>
+              <p className="mt-1.5 font-medium leading-snug text-ink">{item.title}</p>
+              <p className="mt-1 text-sm text-ink-mute">
+                <Authors value={item.authors} />
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
   </Layout>
 );
 
