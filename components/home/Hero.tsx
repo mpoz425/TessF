@@ -108,8 +108,12 @@ export default function Hero() {
               />
             </div>
 
-            {/* Field photo inset — small on purpose, like a pinned print. */}
-            <div className="absolute -bottom-10 -left-4 w-36 rotate-[-4deg] sm:-left-10 sm:w-44">
+            {/*
+              Field photo inset — small on purpose, like a pinned print. The
+              rotation widens its bounding box, so the mobile offset stays well
+              inside the shell padding to avoid horizontal overflow.
+            */}
+            <div className="absolute -bottom-10 -left-1 w-32 rotate-[-4deg] sm:-left-10 sm:w-44">
               <div className="rounded-lg border border-rule bg-white p-1.5 shadow-lift-lg">
                 <Image
                   src="/images/tess-museum-aibo.jpg"
