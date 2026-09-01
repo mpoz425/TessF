@@ -86,3 +86,8 @@ pids
 # Temporary folders
 tmp/
 temp/ 
+# generated at build time
+/public/sitemap.xml
+
+# local design reference material (not part of the site)
+/design-refs/

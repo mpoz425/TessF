@@ -1,40 +1,126 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
+import type { NextPage } from 'next';
 import Layout from '../components/layout/Layout';
-import PublicationsList from '../components/ui/PublicationsList';
-import { getPublications } from '../utils/publications';
+import PageHeader from '../components/ui/PageHeader';
+import ContactCta from '../components/ui/ContactCta';
+import PublicationEntry from '../components/ui/PublicationEntry';
+import Icon from '../components/ui/Icon';
+import { groupByYear, publications, PublicationType, typeLabels } from '../data/publications';
+import { socials } from '../data/site';
 
-const Publications: React.FC = () => {
-  const publications = getPublications();
+type Filter = 'all' | PublicationType;
+
+const filters: { value: Filter; label: string }[] = [
+  { value: 'all', label: 'All' },
+  { value: 'journal', label: 'Journal' },
+  { value: 'conference', label: 'Conference' },
+  { value: 'dissertation', label: 'Theses' },
+];
+
+const scholarUrl = socials.find((s) => s.icon === 'scholar')?.href ?? '#';
+
+const Publications: NextPage = () => {
+  const [filter, setFilter] = useState<Filter>('all');
+
+  const grouped = useMemo(() => {
+    const list =
+      filter === 'all'
+        ? publications
+        : publications.filter((p) =>
+            filter === 'dissertation' ? p.type === 'dissertation' || p.type === 'thesis' : p.type === filter
+          );
+    return groupByYear(list);
+  }, [filter]);
+
+  const total = publications.length;
+  const citations = publications.reduce((sum, p) => sum + (p.citations ?? 0), 0);
 
   return (
     <Layout
-      title="Research Publications - Child-Robot Interaction Studies"
-      description="Browse through Dr. Flanagan's academic publications on child-robot interaction and developmental psychology"
+      title="Publications"
+      description="Peer-reviewed journal articles and conference papers by Tess Flanagan on child–robot interaction, cognitive development, agency, and moral judgment."
     >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
-        <div className="mb-6 sm:mb-8">
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl">Publications</h1>
-          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-600">
-            My research has been published in leading journals and conferences in developmental psychology, 
-            human-robot interaction, and cognitive science. Below you'll find my recent publications, 
-            with a focus on child development, interactive technologies, and research methodologies.
+      <PageHeader
+        eyebrow="Publications"
+        title="Papers, proceedings, and preprints"
+        lede="Peer-reviewed work in developmental psychology, cognitive science, and human–robot interaction. Where data, code, or preprints are public, they are linked alongside each entry."
+      >
+        <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
+          <dl className="flex gap-8">
+            <div>
+              <dt className="eyebrow-mute">Publications</dt>
+              <dd className="mt-1 font-display text-2xl font-semibold text-ink">{total}</dd>
+            </div>
+            <div>
+              <dt className="eyebrow-mute">Citations</dt>
+              <dd className="mt-1 font-display text-2xl font-semibold text-ink">{citations}+</dd>
+            </div>
+          </dl>
+          <a
+            href={scholarUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm text-ink transition-colors hover:text-clay"
+          >
+            <Icon name="scholar" className="h-4 w-4" />
+            Google Scholar profile
+            <Icon name="arrow-up-right" className="h-3.5 w-3.5 text-ink-faint" />
+          </a>
+        </div>
+      </PageHeader>
+
+      <section className="section">
+        <div className="shell">
+          <div
+            role="group"
+            aria-label="Filter publications by type"
+            className="mb-12 flex flex-wrap gap-2 border-b border-rule pb-6"
+          >
+            {filters.map((f) => {
+              const active = filter === f.value;
+              return (
+                <button
+                  key={f.value}
+                  type="button"
+                  onClick={() => setFilter(f.value)}
+                  aria-pressed={active}
+                  className={`rounded-full px-4 py-1.5 text-sm transition-colors ${
+                    active
+                      ? 'bg-ink text-paper'
+                      : 'border border-rule text-ink-soft hover:border-ink hover:text-ink'
+                  }`}
+                >
+                  {f.label}
+                </button>
+              );
+            })}
+          </div>
+
+          <div className="space-y-14">
+            {grouped.map(([year, items]) => (
+              <div key={year} className="grid gap-4 lg:grid-cols-12 lg:gap-10">
+                <h2 className="font-mono text-sm text-clay lg:col-span-2 lg:pt-7">{year}</h2>
+                <div className="lg:col-span-10">
+                  {items.map((pub) => (
+                    <PublicationEntry key={pub.id} publication={pub} />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {grouped.length === 0 && (
+            <p className="py-16 text-center text-ink-mute">No publications in this category yet.</p>
+          )}
+
+          <p className="mt-16 border-t border-rule pt-6 text-sm text-ink-mute">
+            Cannot access a paper? Email me and I will send a copy. Types shown:{' '}
+            {Object.values(typeLabels).join(', ').toLowerCase()}.
           </p>
         </div>
+      </section>
 
-        <div className="space-y-6 sm:space-y-8">
-          <div className="prose max-w-none">
-            <h2 className="text-xl sm:text-2xl font-semibold text-gray-900">Recent Publications</h2>
-            <p className="text-sm sm:text-base text-gray-600">
-              For a complete list of publications or to request access to any papers, 
-              please feel free to contact me.
-            </p>
-          </div>
-
-          <div className="divide-y divide-gray-200">
-            <PublicationsList publications={publications} />
-          </div>
-        </div>
-      </div>
+      <ContactCta />
     </Layout>
   );
 };

@@ -1,94 +1,94 @@
-import React, { useState } from 'react';
+import React from 'react';
+import type { NextPage } from 'next';
 import Layout from '../components/layout/Layout';
+import PageHeader from '../components/ui/PageHeader';
+import Icon from '../components/ui/Icon';
+import { site, socials } from '../data/site';
 
-const Contact: React.FC = () => {
-  const [formState, setFormState] = useState({
-    email: '',
-    message: '',
-    status: ''
-  });
+const reasons = [
+  {
+    title: 'Research collaboration',
+    body: 'If your work touches children, robots, trust, or agency — in psychology, HRI, education, or design — I would like to hear about it.',
+  },
+  {
+    title: 'Talks and panels',
+    body: 'I speak about how children reason about AI and robots, and about what developmental evidence should mean for the people building these systems.',
+  },
+  {
+    title: 'Taking part in a study',
+    body: 'Families in the Chicago area can participate in child–robot interaction research. Sessions are short, playful, and children get to meet the robot afterward.',
+  },
+  {
+    title: 'Students',
+    body: 'Undergraduates and master’s students interested in developmental or HRI research are welcome to reach out about joining a project.',
+  },
+];
 
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email: formState.email,
-          message: formState.message
-        }),
-      });
-
-      if (response.ok) {
-        setFormState(prev => ({ ...prev, status: 'success' }));
-      } else {
-        throw new Error('Failed to send message');
-      }
-    } catch (error) {
-      setFormState(prev => ({ ...prev, status: 'error' }));
-    }
-  };
-
-  return (
-    <Layout
-      title="Contact Tess - Research Inquiries"
-      description="Get in touch with Tess regarding research collaborations or inquiries"
+const Contact: NextPage = () => (
+  <Layout
+    title="Contact"
+    description="Contact Tess Flanagan about research collaborations, talks, student opportunities, or participating in child–robot interaction studies."
+  >
+    <PageHeader
+      eyebrow="Contact"
+      title="Say hello"
+      lede="Email is the fastest way to reach me, and I read everything that arrives."
     >
-      <div className="max-w-2xl mx-auto">
-        <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl mb-8">Contact Me</h1>
-        
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-              Email Address
-            </label>
-            <input
-              type="email"
-              id="email"
-              value={formState.email}
-              onChange={(e) => setFormState(prev => ({ ...prev, email: e.target.value }))}
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-softBlue-500 focus:ring-softBlue-500"
-              required
-            />
+      <a href={`mailto:${site.email}`} className="btn-primary text-base">
+        <Icon name="email" className="h-4 w-4" />
+        {site.email}
+      </a>
+    </PageHeader>
+
+    <section className="section">
+      <div className="shell grid gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="lg:col-span-7">
+          <div className="rule-heading" data-reveal>
+            <span className="eyebrow">Reasons to write</span>
           </div>
+          <dl className="mt-9 space-y-8">
+            {reasons.map((r, i) => (
+              <div key={r.title} className="border-l-2 border-clay-100 pl-6" data-reveal data-reveal-delay={i * 70}>
+                <dt className="font-display text-lg font-semibold text-ink">{r.title}</dt>
+                <dd className="mt-2 max-w-prose leading-relaxed text-ink-soft">{r.body}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
 
-          <div>
-            <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-              Message
-            </label>
-            <textarea
-              id="message"
-              rows={6}
-              value={formState.message}
-              onChange={(e) => setFormState(prev => ({ ...prev, message: e.target.value }))}
-              className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-softBlue-500 focus:ring-softBlue-500"
-              required
-            />
+        <aside className="lg:col-span-5">
+          <div className="rounded-card border border-rule bg-paper-alt p-7" data-reveal>
+            <p className="eyebrow-mute">Where to find me</p>
+            <address className="mt-4 not-italic leading-relaxed text-ink-soft">
+              <span className="block font-medium text-ink">Data Science Institute</span>
+              University of Chicago
+              <br />
+              5730 S. Ellis Avenue
+              <br />
+              Chicago, IL 60637
+            </address>
+
+            <p className="eyebrow-mute mt-8">Elsewhere</p>
+            <ul className="mt-4 space-y-3">
+              {socials.map((s) => (
+                <li key={s.name}>
+                  <a
+                    href={s.href}
+                    target={s.icon === 'email' ? undefined : '_blank'}
+                    rel={s.icon === 'email' ? undefined : 'noopener noreferrer'}
+                    className="group inline-flex items-center gap-2.5 text-sm text-ink-soft transition-colors hover:text-clay"
+                  >
+                    <Icon name={s.icon} className="h-4 w-4 text-ink-faint transition-colors group-hover:text-clay" />
+                    {s.handle}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
-
-          {formState.status === 'success' && (
-            <div className="rounded-md bg-green-50 p-4">
-              <p className="text-sm text-green-700">Message sent successfully!</p>
-            </div>
-          )}
-
-          {formState.status === 'error' && (
-            <div className="rounded-md bg-red-50 p-4">
-              <p className="text-sm text-red-700">Failed to send message. Please try again.</p>
-            </div>
-          )}
-
-          <button
-            type="submit"
-            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-softBlue hover:bg-softBlue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-softBlue-500"
-          >
-            Send Message
-          </button>
-        </form>
+        </aside>
       </div>
-    </Layout>
-  );
-};
+    </section>
+  </Layout>
+);
 
 export default Contact;

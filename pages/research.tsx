@@ -1,67 +1,88 @@
 import React from 'react';
+import type { NextPage } from 'next';
 import Layout from '../components/layout/Layout';
+import PageHeader from '../components/ui/PageHeader';
+import ContactCta from '../components/ui/ContactCta';
+import PublicationEntry from '../components/ui/PublicationEntry';
+import { researchThemes } from '../data/content';
+import { publications } from '../data/publications';
 
-const Research: React.FC = () => {
-  return (
-    <Layout
-      title="Research Areas - Social Cognitive Development and Human-Robot Interaction"
-      description="Explore our research in social cognitive development, agency beliefs, and human-robot interaction"
+const byId = new Map(publications.map((p) => [p.id, p]));
+
+const Research: NextPage = () => (
+  <Layout
+    title="Research"
+    description="Research on children's theories of machine minds, trust in robots, child–robot connection, agency and moral standing, and new instruments for developmental science."
+  >
+    <PageHeader
+      eyebrow="Research"
+      title="What children believe about machines, and why it matters"
+      lede="Children are the first generation to grow up with genuinely interactive technology as ordinary furniture. My work asks how that changes the concepts they build — about minds, about choice, and about who counts."
     >
-      <div className="max-w-4xl mx-auto pt-20 px-4 sm:px-6 lg:px-8">
-        <div className="mb-8 sm:mb-12">
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 md:text-4xl">Research Overview</h1>
-          <p className="mt-3 sm:mt-4 text-base sm:text-lg text-gray-600">
-            My research investigates social cognitive development with a focus on how children understand and interact 
-            with robotic agents. Through innovative methodologies and interdisciplinary approaches, we explore questions 
-            about agency beliefs, choice, free will, and moral judgment in the context of human-robot interaction.
-          </p>
-        </div>
+      <nav aria-label="Research areas" className="flex flex-wrap gap-2">
+        {researchThemes.map((theme) => (
+          <a
+            key={theme.id}
+            href={`#${theme.id}`}
+            className="rounded-full border border-rule bg-paper px-4 py-1.5 text-sm text-ink-soft transition-colors hover:border-clay-200 hover:text-clay"
+          >
+            <span className="font-mono text-xs text-ink-faint">{theme.index}</span>{' '}
+            {theme.title}
+          </a>
+        ))}
+      </nav>
+    </PageHeader>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
-          {/* Research Areas */}
-          <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 border border-gray-200">
-            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">
-              Social Cognitive Development
-            </h2>
-            <p className="text-sm sm:text-base text-gray-600">
-              Investigating how children develop understanding of agency, choice, and free will, 
-              particularly in the context of interactions with technological agents.
-            </p>
-          </div>
+    {researchThemes.map((theme, index) => {
+      const related = theme.related.map((id) => byId.get(id)).filter(Boolean);
+      const shaded = index % 2 === 1;
 
-          <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 border border-gray-200">
-            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">
-              Agency Beliefs and Human-Robot Interaction
-            </h2>
-            <p className="text-sm sm:text-base text-gray-600">
-              Exploring how children attribute properties and capabilities to robotic agents, 
-              and how these beliefs influence their interactions and learning.
-            </p>
-          </div>
+      return (
+        <section
+          key={theme.id}
+          id={theme.id}
+          className={`section scroll-mt-24 border-b border-rule ${shaded ? 'bg-paper-alt' : ''}`}
+        >
+          <div className="shell grid gap-10 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-5">
+              <p className="font-mono text-sm text-clay" data-reveal>
+                {theme.index}
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold leading-tight sm:text-4xl" data-reveal data-reveal-delay="60">
+                {theme.title}
+              </h2>
+              <p
+                className="mt-5 font-display text-xl italic leading-snug text-ink-mute"
+                data-reveal
+                data-reveal-delay="120"
+              >
+                {theme.question}
+              </p>
+            </div>
 
-          <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 border border-gray-200">
-            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">
-              Choice and Free Will
-            </h2>
-            <p className="text-sm sm:text-base text-gray-600">
-              Examining children's understanding of choice and free will, particularly in 
-              their attributions to humanoid robots and other technological agents.
-            </p>
-          </div>
+            <div className="lg:col-span-7">
+              <p className="lede max-w-prose" data-reveal data-reveal-delay="80">
+                {theme.body}
+              </p>
 
-          <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 border border-gray-200">
-            <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">
-              Moral Judgment
-            </h2>
-            <p className="text-sm sm:text-base text-gray-600">
-              Studying how children develop moral understanding and make moral judgments 
-              in the context of human-robot interaction.
-            </p>
+              {related.length > 0 && (
+                <div className="mt-10" data-reveal data-reveal-delay="140">
+                  <h3 className="eyebrow-mute">Selected papers</h3>
+                  <div className="mt-2">
+                    {related.map((pub) => (
+                      <PublicationEntry key={pub!.id} publication={pub!} />
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
-        </div>
-      </div>
-    </Layout>
-  );
-};
+        </section>
+      );
+    })}
+
+    <ContactCta />
+  </Layout>
+);
 
 export default Research;
