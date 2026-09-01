@@ -15,8 +15,8 @@ export default function ResearchPreview() {
           action={{ label: 'All research areas', href: '/research' }}
         />
 
-        <ul className="grid gap-px overflow-hidden rounded-card border border-rule bg-rule sm:grid-cols-2">
-          {researchThemes.slice(0, 4).map((theme, i) => (
+        <ul className="grid gap-px overflow-hidden rounded-card border border-rule bg-rule lg:grid-cols-3">
+          {researchThemes.map((theme, i) => (
             <li key={theme.id} data-reveal data-reveal-delay={i * 70}>
               <Link
                 href={`/research#${theme.id}`}

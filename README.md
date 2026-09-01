@@ -52,15 +52,15 @@ The full publication list. Each entry looks like this:
 }
 ```
 
-Adding a paper to the top of the array is all that is required — the publications
-page, the CV page, the year grouping, the type filters, and the citation total all
-derive from this list. Set `featured: true` on the papers that should appear on the
-home page.
+Adding a paper to the top of the array is all that is required, since the CV page and
+its year grouping derive from this list. Set `featured: true` on the papers that
+should appear on the home page, and reference a paper's `id` from a research theme to
+surface it on the research page.
 
 ### `data/content.ts`
 
-Research themes, the positions and education timelines, awards, teaching, mentorship,
-outreach, methods, and the news items on the home page.
+Research themes, the positions and education timelines, awards, teaching, outreach,
+methods, and the news items on the home page.
 
 Research themes reference publications by `id` through their `related` array, so a
 paper added to `publications.ts` can be surfaced under a theme without duplicating it.
