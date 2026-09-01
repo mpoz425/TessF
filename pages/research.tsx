@@ -57,7 +57,7 @@ const Research: NextPage = () => (
           className={`section scroll-mt-24 border-b border-rule ${shaded ? 'bg-paper-alt' : ''}`}
         >
           <div className="shell grid gap-10 lg:grid-cols-12 lg:gap-16">
-            <div className="lg:col-span-5">
+            <div className="lg:sticky lg:top-24 lg:col-span-5 lg:self-start">
               <p className="font-mono text-sm text-clay" data-reveal>
                 {theme.index}
               </p>
