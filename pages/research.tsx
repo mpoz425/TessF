@@ -5,9 +5,16 @@ import PageHeader from '../components/ui/PageHeader';
 import ContactCta from '../components/ui/ContactCta';
 import PublicationEntry from '../components/ui/PublicationEntry';
 import { researchThemes } from '../data/content';
-import { publications } from '../data/publications';
+import { publications, type Publication } from '../data/publications';
 
 const byId = new Map(publications.map((p) => [p.id, p]));
+
+const relatedTo = (ids: string[]): Publication[] =>
+  ids.reduce<Publication[]>((acc, id) => {
+    const pub = byId.get(id);
+    if (pub) acc.push(pub);
+    return acc;
+  }, []);
 
 const Research: NextPage = () => (
   <Layout
@@ -34,7 +41,7 @@ const Research: NextPage = () => (
     </PageHeader>
 
     {researchThemes.map((theme, index) => {
-      const related = theme.related.map((id) => byId.get(id)).filter(Boolean);
+      const related = relatedTo(theme.related);
       const shaded = index % 2 === 1;
 
       return (
@@ -70,7 +77,7 @@ const Research: NextPage = () => (
                   <h3 className="eyebrow-mute">Selected papers</h3>
                   <div className="mt-2">
                     {related.map((pub) => (
-                      <PublicationEntry key={pub!.id} publication={pub!} />
+                      <PublicationEntry key={pub.id} publication={pub} />
                     ))}
                   </div>
                 </div>

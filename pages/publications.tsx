@@ -5,7 +5,7 @@ import PageHeader from '../components/ui/PageHeader';
 import ContactCta from '../components/ui/ContactCta';
 import PublicationEntry from '../components/ui/PublicationEntry';
 import Icon from '../components/ui/Icon';
-import { groupByYear, publications, PublicationType, typeLabels } from '../data/publications';
+import { groupByYear, publications, type PublicationType } from '../data/publications';
 import { socials } from '../data/site';
 
 type Filter = 'all' | PublicationType;
@@ -114,8 +114,7 @@ const Publications: NextPage = () => {
           )}
 
           <p className="mt-16 border-t border-rule pt-6 text-sm text-ink-mute">
-            Cannot access a paper? Email me and I will send a copy. Types shown:{' '}
-            {Object.values(typeLabels).join(', ').toLowerCase()}.
+            Cannot access a paper? Email me and I will send a copy.
           </p>
         </div>
       </section>
