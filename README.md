@@ -54,17 +54,10 @@ navigation, external profile links, and the three "currently" facts under the he
 Navigation entries take an optional `external: true`, which renders them as a plain
 link that opens in a new tab. The CV uses this to point at the PDF.
 
-**Contact photo.** `site.contactPhoto` is `null` by default and the contact page simply
-omits the image. To add one, drop the file into `public/images/` and set:
-
-```ts
-contactPhoto: {
-  src: '/images/tess-misty.jpg',
-  alt: 'Tess with Misty the robot',
-  width: 1200,   // the file's real pixel dimensions
-  height: 900,
-},
-```
+**Photos.** The home page uses `public/images/tess-speaking.jpg`. The research
+page heading uses `tess-museum-aibo.jpg`. The contact page uses `tess-portrait.jpg`,
+configured as `site.contactPhoto` in `data/site.ts`. To replace any of them, drop in
+a file of the same name (or update the path and pixel dimensions).
 
 ### `data/publications.ts`
 
