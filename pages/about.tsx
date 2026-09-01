@@ -18,7 +18,7 @@ const About: NextPage = () => (
     <PageHeader
       eyebrow="About"
       title="A developmental psychologist in a robotics lab"
-      lede="I came to human–robot interaction the long way around — through philosophy of mind, infant eye tracking, and a lot of hours on museum floors asking children what they think a machine can feel."
+      lede="I arrived at human–robot interaction by a fairly indirect route, having come through philosophy of mind and infant eye tracking before spending a great many hours on museum floors asking children what they think a machine is capable of feeling."
     />
 
     <section className="section">
@@ -27,31 +27,33 @@ const About: NextPage = () => (
           <div className="prose prose-lg" data-reveal>
             <p>
               I am a postdoctoral scholar at the Data Science Institute at the University of Chicago, where I
-              work in Dr. Sarah Sebo&rsquo;s Human–Robot Interaction Lab. My research sits at the seam between
-              developmental psychology and robotics: I study what children believe about the technologies
-              around them, and how those beliefs shape whether they trust, learn from, and form attachments to
-              machines.
+              work in Dr. Sarah Sebo&rsquo;s Human–Robot Interaction Lab. My research sits along the seam
+              between developmental psychology and robotics, and it is concerned with what children believe
+              about the technologies around them and how those beliefs shape whether they go on to trust
+              machines, learn from them, or become attached to them.
             </p>
             <p>
-              That question turns out to be less obvious than it sounds. Children do not simply sort the world
-              into alive and not-alive. Across my work with smart speakers, robot vacuums, and humanoid robots,
-              their attributions separate into distinct clusters — whether a thing has experiences, whether it
-              has a mind, and whether it deserves moral treatment — and each of those develops on its own
-              schedule. A seven-year-old can be confident that a robot cannot feel pain while remaining
-              genuinely unsure whether it chose to do what it just did.
+              That turns out to be a less straightforward question than it first appears, because children do
+              not simply sort the world into things that are alive and things that are not. Across my work with
+              smart speakers, robot vacuums, and humanoid robots, the properties children attribute separate
+              into distinct clusters, covering whether a thing has experiences, whether it has a mind, and
+              whether it deserves moral treatment, and each of these appears to develop on its own schedule. A
+              seven-year-old can be quite certain that a robot is unable to feel pain while remaining genuinely
+              undecided about whether it chose to do what it has just done.
             </p>
             <p>
-              My doctoral work at Cornell, with Dr. Tamar Kushnir, traced how children reason about agency and
-              free will as the technological landscape around them changes. Since then I have been pushing in
-              two directions at once. One is interactional: what specific robot behaviors build a real sense of
-              connection with a child, and what that implies for robots being placed in classrooms. The other
-              is methodological — asking whether the same technologies we study can also help developmental
-              science collect better data from a wider range of families than the field currently reaches.
+              My doctoral work at Cornell, supervised by Dr. Tamar Kushnir, traced the way children reason
+              about agency and free will as the technological landscape around them continues to shift. Since
+              finishing, I have been working in two directions at once. The first is interactional, and asks
+              which particular robot behaviors build a genuine sense of connection with a child, along with
+              what that implies for the robots now being placed in classrooms. The second is methodological,
+              and considers whether the same technologies we study might also help developmental science gather
+              better data from a wider range of families than the field currently manages to reach.
             </p>
             <p>
-              Before Chicago I was a postdoctoral fellow at Duke University, and before that I earned my B.A.
-              at Franklin &amp; Marshall College, where an honors thesis on children&rsquo;s attributions of
-              free will to robots set the agenda I am still working through.
+              Before coming to Chicago I was a postdoctoral fellow at Duke University, and before that I earned
+              my B.A. at Franklin &amp; Marshall College, where an honors thesis on children&rsquo;s
+              attributions of free will to robots set out much of the agenda I am still working through today.
             </p>
           </div>
 

@@ -14,7 +14,7 @@ export const researchThemes: ResearchTheme[] = [
     index: '01',
     title: 'Children’s theories of machine minds',
     question: 'What does a child think is going on inside a robot?',
-    body: 'Long before anyone teaches them, children arrive at working theories about what technologies can feel, know, and want. I map those theories across familiar devices — a smart speaker, a vacuum, a humanoid robot — and track how they reorganize with age. What emerges is not a single "is it alive?" judgment but several separable beliefs: having experiences, having a mind, and deserving moral treatment.',
+    body: 'Well before anyone sits them down to explain it, children arrive at working theories about what the technologies around them can feel, know, and want. I map those theories across the devices children actually encounter, including smart speakers, robot vacuums, and humanoid robots, and follow how they are reorganized over the course of development. What emerges is not a single judgment about whether a thing is alive, but a set of separable beliefs about whether it has experiences, whether it has a mind, and whether it deserves moral treatment, each of which appears to develop on its own timeline.',
     related: ['devpsych23-minds', 'humanamente22-agency'],
   },
   {
@@ -22,7 +22,7 @@ export const researchThemes: ResearchTheme[] = [
     index: '02',
     title: 'Trust, testimony, and skepticism',
     question: 'When should a child believe a machine?',
-    body: 'Children increasingly learn from systems that are confident, fluent, and sometimes wrong. I study how they calibrate: which cues they use to discount an unreliable robot, how that skepticism sharpens across the school years, and where it diverges from how adults respond to the same errors.',
+    body: 'Children are increasingly learning from systems that sound confident and fluent even when they happen to be wrong, which raises the question of how they go about calibrating their trust. I look at the cues they use to discount an unreliable robot, at the way that skepticism shifts across the school years, and at the points where children respond rather differently from adults who have been shown the same errors.',
     related: ['cognition24-skeptical'],
   },
   {
@@ -30,7 +30,7 @@ export const researchThemes: ResearchTheme[] = [
     index: '03',
     title: 'Connection and vulnerability in child–robot interaction',
     question: 'What makes a child feel close to a robot?',
-    body: 'Relationships with robots are built from small behavioral moments. In controlled interaction studies I isolate the behaviors that actually produce closeness and trust — asking for help rather than merely reporting a problem, expressing something that reads as feeling rather than malfunction — and ask what that means for designing robots that children will spend real time with in classrooms.',
+    body: 'Whatever relationship a child forms with a robot is assembled out of small behavioral moments, and controlled interaction studies let me isolate which of those moments matter. Asking a child for help rather than simply reporting a problem turns out to make a measurable difference, as does expressing something that reads as feeling rather than as malfunction. My interest is in what findings like these imply for the design of robots that children may end up spending a good deal of time with in classrooms.',
     related: ['hri26-help'],
   },
   {
@@ -38,7 +38,7 @@ export const researchThemes: ResearchTheme[] = [
     index: '04',
     title: 'Choice, free will, and moral standing',
     question: 'Who gets to count as an agent?',
-    body: 'My work on agency runs in both directions: how children come to believe in their own capacity to choose, and how far they extend that capacity to others — including machines. This is where developmental psychology meets philosophy, and where questions about explanation, sufficient reason, and moral responsibility become empirically testable with four-year-olds.',
+    body: 'My work on agency runs in two directions at once, taking in both how children come to believe in their own capacity to choose and how far they are willing to extend that capacity to others, machines included. This is the point at which developmental psychology meets philosophy most directly, and where longstanding questions about explanation, sufficient reason, and moral responsibility can be turned into something that is genuinely testable with four-year-olds.',
     related: ['cogsci21-constrained', 'hri25-morality', 'jecp25-butwhy', 'cogsci23-psr', 'cogsci19-fluency'],
   },
   {
@@ -46,7 +46,7 @@ export const researchThemes: ResearchTheme[] = [
     index: '05',
     title: 'New instruments for developmental science',
     question: 'Can the technologies we study also help us study children?',
-    body: 'Developmental data is expensive, slow, and drawn from narrow samples. At the Data Science Institute I work on the other side of the question: using robots and AI as instruments rather than stimuli, and building community-engaged infrastructure — museums, schools, public science spaces — that widens who ends up in the sample.',
+    body: 'Developmental data tends to be slow and costly to collect, and it is often drawn from a narrower range of families than we would like. At the Data Science Institute I have been working on the other side of that problem, treating robots and AI systems as instruments for research rather than only as objects of study, and helping build the kind of community-engaged infrastructure, in museums, schools, and public science spaces, that widens who is able to take part in the first place.',
     related: ['frontiers21-cel'],
   },
 ];
@@ -139,35 +139,35 @@ export const teaching = [
     org: 'Cornell University',
     role: 'Head Teaching Assistant',
     period: 'Fall 2019',
-    body: 'Coordinated a teaching team for the department’s large introductory developmental course, ran discussion sections, and managed assessment across several hundred students.',
+    body: 'Coordinated the teaching team for the department’s large introductory course in developmental psychology, leading discussion sections of my own while overseeing assessment across a cohort of several hundred students.',
   },
   {
     title: 'HD 1150 — Introduction to Infancy and Childhood',
     org: 'Cornell University',
     role: 'Teaching Assistant',
     period: 'Fall 2018',
-    body: 'Led weekly sections introducing undergraduates to developmental theory and methods, from infant looking-time paradigms to preschool interviewing.',
+    body: 'Led weekly sections introducing undergraduates to developmental theory and method, covering everything from infant looking-time paradigms through to the practicalities of interviewing preschoolers.',
   },
 ];
 
 export const mentorship = [
-  'Undergraduate and master’s researchers in the UChicago Human–Robot Interaction Lab, on study design, robot scripting, and analysis',
-  'Research assistants at Cornell’s Early Childhood Cognition Lab across museum, lab, and online data collection',
-  'First-generation and underrepresented students navigating research and graduate applications',
+  'Undergraduate and master’s researchers in the UChicago Human–Robot Interaction Lab, working on study design, robot scripting, and analysis',
+  'Research assistants at Cornell’s Early Childhood Cognition Lab, across museum, laboratory, and online data collection',
+  'First-generation and underrepresented students thinking through research experience and graduate applications',
 ];
 
 export const outreach = [
   {
     title: 'Museum-based developmental science',
-    body: 'Much of my data has been collected on the floors of science museums rather than in a lab. Families take part in a short study, and then get to meet the robot and hear what the question actually was. It widens who participates in research and turns a study session into a science conversation.',
+    body: 'A considerable amount of my data has been gathered on the floors of science museums rather than in a university laboratory. Families take part in a short study and then have the chance to meet the robot and hear what the question behind the session actually was, which both widens the range of children who end up in developmental research and turns a few minutes of participation into something closer to a conversation about science.',
   },
   {
     title: 'The community-engaged lab',
-    body: 'I contributed to a case-study framework for building durable partnerships between developmental labs and their surrounding communities — published in Frontiers in Psychology as a practical introduction for other researchers.',
+    body: 'I contributed to a case-study framework for building durable partnerships between developmental laboratories and the communities around them, published in Frontiers in Psychology as a practical introduction for researchers who want to work this way but are unsure where to begin.',
   },
   {
     title: 'Graduate and Professional Diversity Council',
-    body: 'Member at Cornell, working on recruitment, retention, and climate for graduate students across the university.',
+    body: 'As a member of the council at Cornell, I worked on questions of recruitment, retention, and departmental climate for graduate students across the university.',
   },
 ];
 
@@ -188,17 +188,17 @@ export type NewsItem = { date: string; body: string; href?: string };
 export const news: NewsItem[] = [
   {
     date: 'Mar 2026',
-    body: 'Presenting “Can You Help Me?” at HRI ’26 in Edinburgh — what happens to trust when a robot asks a child for help.',
+    body: 'I will be presenting “Can You Help Me?” at HRI ’26 in Edinburgh, on what happens to a child’s trust when a robot asks them for help rather than simply reporting that something has gone wrong.',
     href: 'https://doi.org/10.1145/3757279.3785631',
   },
   {
     date: '2025',
-    body: '“But why?: Children’s belief in the necessity of explanations” is out in the Journal of Experimental Child Psychology.',
+    body: '“But why?: Children’s belief in the necessity of explanations” has been published in the Journal of Experimental Child Psychology, with Alejandro Vesga, Tamar Kushnir, and Shaun Nichols.',
     href: 'https://doi.org/10.1016/j.jecp.2025.106317',
   },
   {
     date: 'Sept 2024',
-    body: 'Joined the Data Science Institute at the University of Chicago as a postdoctoral scholar.',
+    body: 'I joined the Data Science Institute at the University of Chicago as a postdoctoral scholar, working in Sarah Sebo’s Human–Robot Interaction Lab.',
     href: 'https://datascience.uchicago.edu/people/teresa-flanagan/',
   },
 ];

@@ -9,8 +9,8 @@ export default function FeaturedWork() {
       <div className="shell">
         <SectionHeading
           eyebrow="Selected work"
-          title="What the studies found"
-          lede="A few papers that best represent the through-line — written up here in plain language, with data and code where it exists."
+          title="Some of what the studies have found"
+          lede="These papers give a reasonable sense of the overall direction of the work. Each is summarized here in plain language, with data and code linked wherever they are publicly available."
           action={{ label: 'All publications', href: '/publications' }}
         />
 

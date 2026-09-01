@@ -43,7 +43,7 @@ const Publications: NextPage = () => {
       <PageHeader
         eyebrow="Publications"
         title="Papers, proceedings, and preprints"
-        lede="Peer-reviewed work in developmental psychology, cognitive science, and human–robot interaction. Where data, code, or preprints are public, they are linked alongside each entry."
+        lede="Peer-reviewed work across developmental psychology, cognitive science, and human–robot interaction. Where the underlying data, analysis code, or a preprint has been made public, it is linked alongside the entry."
       >
         <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
           <dl className="flex gap-8">
@@ -114,7 +114,7 @@ const Publications: NextPage = () => {
           )}
 
           <p className="mt-16 border-t border-rule pt-6 text-sm text-ink-mute">
-            Cannot access a paper? Email me and I will send a copy.
+            If you are unable to access any of these papers, do email me and I will happily send you a copy.
           </p>
         </div>
       </section>

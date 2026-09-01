@@ -33,7 +33,7 @@ export default function Hero() {
             data-reveal
             data-reveal-delay="120"
           >
-            I study how children make sense of the machines they are growing up with.
+            I study how children come to understand the machines they are growing up alongside.
           </p>
 
           <p className="mt-6 max-w-prose leading-relaxed text-ink-soft" data-reveal data-reveal-delay="180">
@@ -50,8 +50,9 @@ export default function Hero() {
             <a href="http://hri.cs.uchicago.edu/" target="_blank" rel="noopener noreferrer" className="link">
               Human–Robot Interaction Lab
             </a>
-            . My research asks what children believe robots and AI can think, feel, choose, and deserve — and
-            what those beliefs mean for the technologies we are putting in front of them.
+            . My research asks what children believe robots and artificial intelligence are able to think,
+            feel, choose, and deserve, and how those beliefs ought to inform the way such systems are designed
+            for the children who will use them.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-3" data-reveal data-reveal-delay="240">

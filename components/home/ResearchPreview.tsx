@@ -10,8 +10,8 @@ export default function ResearchPreview() {
       <div className="shell">
         <SectionHeading
           eyebrow="Research"
-          title="Four questions, one moving target"
-          lede="Children are forming beliefs about machines faster than the field can measure them. These are the threads I pull on."
+          title="The questions I keep returning to"
+          lede="Children are forming beliefs about the technologies around them rather more quickly than developmental science has managed to document, and the areas below describe where I have concentrated that work."
           action={{ label: 'All research areas', href: '/research' }}
         />
 

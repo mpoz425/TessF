@@ -3,16 +3,16 @@ import Image from 'next/image';
 
 const principles = [
   {
-    title: 'Studies that leave the lab',
-    body: 'Museum floors, classrooms, and community science spaces — because a convenience sample of university-adjacent four-year-olds cannot answer questions about how children in general understand technology.',
+    title: 'Working outside the laboratory',
+    body: 'A good deal of my data has been collected in science museums, classrooms, and other community spaces rather than in a university laboratory, on the reasoning that a sample drawn only from families who already live near a research campus can tell us relatively little about how children in general come to understand technology.',
   },
   {
-    title: 'Real robots, controlled designs',
-    body: 'Children meet an actual NAO robot in a scripted, randomized interaction. Keeping the machine physically present matters: beliefs about a robot on a screen are not the same as beliefs about one in the room.',
+    title: 'Physical robots in controlled designs',
+    body: 'Children in my studies meet an actual NAO robot in an interaction that is scripted and randomized, and keeping the machine physically present in the room matters more than it might appear, since what a child believes about a robot on a screen turns out to be quite different from what they believe about one sitting in front of them.',
   },
   {
-    title: 'Psychology and philosophy, together',
-    body: 'Questions about free will, sufficient reason, and moral standing came from philosophy first. I turn them into things a six-year-old can be asked, and take the answers seriously in both directions.',
+    title: 'Psychology alongside philosophy',
+    body: 'Questions about free will, sufficient reason, and moral standing came into this field from philosophy rather than psychology, and a fair amount of my work involves translating them into something a six-year-old can reasonably be asked, then taking the answers seriously in both directions.',
   },
 ];
 
@@ -41,7 +41,7 @@ export default function Approach() {
             <span className="eyebrow">Approach</span>
           </div>
           <h2 className="mt-5 max-w-xl text-3xl font-semibold sm:text-4xl" data-reveal data-reveal-delay="60">
-            How the work gets done
+            How the research is done
           </h2>
 
           <dl className="mt-10 space-y-8">

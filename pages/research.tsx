@@ -24,7 +24,7 @@ const Research: NextPage = () => (
     <PageHeader
       eyebrow="Research"
       title="What children believe about machines, and why it matters"
-      lede="Children are the first generation to grow up with genuinely interactive technology as ordinary furniture. My work asks how that changes the concepts they build — about minds, about choice, and about who counts."
+      lede="Children today are the first generation for whom genuinely interactive technology is simply part of the ordinary furniture of the house, and my work asks how growing up in that setting changes the concepts they build about minds, about choice, and about who or what ends up counting as an agent."
     >
       <nav aria-label="Research areas" className="flex flex-wrap gap-2">
         {researchThemes.map((theme) => (

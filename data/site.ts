@@ -4,12 +4,11 @@ export const site = {
   pronouns: 'she/her',
   role: 'Postdoctoral Scholar',
   affiliation: 'Data Science Institute, University of Chicago',
-  tagline: 'Developmental psychologist studying how children make sense of robots and AI.',
   url: 'https://tessflanagan.com',
   email: 'tflanagan2@uchicago.edu',
   cvPath: '/cv',
   description:
-    'Teresa (Tess) Flanagan is a developmental psychologist and postdoctoral scholar at the University of Chicago Data Science Institute, studying how children reason about, trust, and connect with robots and AI.',
+    'Teresa (Tess) Flanagan is a developmental psychologist and postdoctoral scholar at the Data Science Institute at the University of Chicago, where she studies how children reason about, learn from, and form connections with robots and artificial intelligence.',
 } as const;
 
 export const nav = [

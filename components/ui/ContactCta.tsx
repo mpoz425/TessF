@@ -22,8 +22,8 @@ export default function ContactCta() {
           data-reveal
           data-reveal-delay="120"
         >
-          I am always glad to hear from researchers, designers building for children, and families curious
-          about taking part in a study.
+          I am always glad to hear from other researchers, from people designing technology for children, and
+          from families who are curious about taking part in a study.
         </p>
         <div className="mt-9 flex justify-center" data-reveal data-reveal-delay="180">
           <a

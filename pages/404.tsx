@@ -9,9 +9,10 @@ const NotFound: NextPage = () => (
   <Layout title="Page not found" description="That page does not exist.">
     <section className="shell flex min-h-[60vh] flex-col items-center justify-center py-24 text-center">
       <p className="eyebrow">Error 404</p>
-      <h1 className="mt-5 text-display-sm font-semibold sm:text-display">This page went missing</h1>
-      <p className="lede mt-5 max-w-md">
-        The link may be out of date. Here is everywhere else on the site.
+      <h1 className="mt-5 text-display-sm font-semibold sm:text-display">This page could not be found</h1>
+      <p className="lede mt-5 max-w-lg">
+        The link that brought you here may well be out of date, so you might try one of the pages below
+        instead.
       </p>
       <nav aria-label="Site pages" className="mt-9 flex flex-wrap justify-center gap-2">
         <Link

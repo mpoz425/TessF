@@ -8,19 +8,19 @@ import { site, socials } from '../data/site';
 const reasons = [
   {
     title: 'Research collaboration',
-    body: 'If your work touches children, robots, trust, or agency — in psychology, HRI, education, or design — I would like to hear about it.',
+    body: 'If your work touches on children, robots, trust, or agency, whether from psychology, human–robot interaction, education, or design, I would be glad to hear about it.',
   },
   {
     title: 'Talks and panels',
-    body: 'I speak about how children reason about AI and robots, and about what developmental evidence should mean for the people building these systems.',
+    body: 'I speak about the way children reason about robots and artificial intelligence, and about what the developmental evidence ought to mean for the people who are building these systems.',
   },
   {
     title: 'Taking part in a study',
-    body: 'Families in the Chicago area can participate in child–robot interaction research. Sessions are short, playful, and children get to meet the robot afterward.',
+    body: 'Families in the Chicago area are welcome to take part in child–robot interaction research. Sessions are short and generally quite playful, and children have the chance to meet the robot properly once the study itself is finished.',
   },
   {
     title: 'Students',
-    body: 'Undergraduates and master’s students interested in developmental or HRI research are welcome to reach out about joining a project.',
+    body: 'Undergraduates and master’s students with an interest in developmental or human–robot interaction research are welcome to write to me about joining a project.',
   },
 ];
 
@@ -31,8 +31,8 @@ const Contact: NextPage = () => (
   >
     <PageHeader
       eyebrow="Contact"
-      title="Say hello"
-      lede="Email is the fastest way to reach me, and I read everything that arrives."
+      title="Get in touch"
+      lede="Email is much the quickest way to reach me, and I do read everything that arrives, even when it takes me a little while to reply."
     >
       <a href={`mailto:${site.email}`} className="btn-primary text-base">
         <Icon name="email" className="h-4 w-4" />

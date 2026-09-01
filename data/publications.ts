@@ -42,7 +42,7 @@ export const publications: Publication[] = [
     type: 'conference',
     featured: true,
     summary:
-      'Children aged 6–10 trusted a robot more when it asked them for help than when it simply reported a problem — and felt closest to a robot whose request carried genuine emotion.',
+      'Children between six and ten trusted a robot more readily when it asked them for help than when it simply reported that something had gone wrong, and they felt closest to it when that request was expressed with some evident feeling behind it.',
     links: {
       doi: 'https://doi.org/10.1145/3757279.3785631',
       pdf: 'http://hri.cs.uchicago.edu/publications/HRI_2026_Flanagan_Can_You_Help_Me.pdf',
@@ -81,7 +81,7 @@ export const publications: Publication[] = [
     citations: 19,
     featured: true,
     summary:
-      'When a robot got things wrong, school-age children discounted it more sharply than adults did — evidence that skepticism toward machines is actively constructed in childhood, not inherited from adults.',
+      'When a robot gave inaccurate information, school-age children discounted it considerably more sharply than adults did, which suggests that skepticism toward machines is something children work out for themselves rather than something they absorb from the adults around them.',
     links: { doi: 'https://doi.org/10.1016/j.cognition.2024.105814' },
   },
   {
@@ -105,7 +105,7 @@ export const publications: Publication[] = [
     citations: 59,
     featured: true,
     summary:
-      'Across Alexa, Roomba, and the Nao robot, children’s attributions of agency sorted into three distinct clusters — having experiences, having minds, and deserving moral treatment — and thinned out with age.',
+      'Across Alexa, Roomba, and the NAO robot, the properties children attributed to each technology sorted into three distinct clusters, covering whether it has experiences, whether it has a mind, and whether it deserves moral treatment. Children endorsed some agent-like features for all three devices, though they did so less as they grew older.',
     links: { doi: 'https://doi.org/10.1037/dev0001524' },
   },
   {
@@ -148,7 +148,7 @@ export const publications: Publication[] = [
     citations: 25,
     featured: true,
     summary:
-      'Children granted a humanoid robot the freedom to act otherwise in situations where adults saw only a machine following its programming.',
+      'Presented with the same constrained scenarios, children were willing to grant a humanoid robot the freedom to have acted otherwise, whereas adults tended to see nothing more than a machine following its programming.',
     links: { doi: 'https://doi.org/10.1111/cogs.13043' },
   },
   {

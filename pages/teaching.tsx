@@ -14,7 +14,7 @@ const Teaching: NextPage = () => (
     <PageHeader
       eyebrow="Teaching & Outreach"
       title="Bringing people into the work"
-      lede="Most of what I study happens in public — in museums, in classrooms, in living rooms. Teaching and outreach are not a sideline to that research; they are the conditions that make it possible."
+      lede="A great deal of what I study takes place in public settings such as museums, classrooms, and living rooms, which means that teaching and outreach are not really a sideline to the research so much as the conditions that allow it to happen at all."
     />
 
     <section className="section">
@@ -27,8 +27,9 @@ const Teaching: NextPage = () => (
             Teaching
           </h2>
           <p className="mt-4 text-ink-soft" data-reveal data-reveal-delay="120">
-            My classroom teaching has centered on the introductory developmental sequence — the course where
-            most students first encounter the idea that childhood can be studied experimentally.
+            My classroom teaching has centered on the introductory developmental sequence, which is where most
+            students first encounter the idea that childhood is something that can be studied experimentally
+            rather than only described.
           </p>
         </div>
 
@@ -64,8 +65,8 @@ const Teaching: NextPage = () => (
             />
           </div>
           <figcaption className="mt-3 text-sm leading-relaxed text-ink-mute">
-            Running a study at a public science event. Families take part, and then get to meet the robot and
-            hear what the question actually was.
+            Running a study at a public science event, where families take part and then have the chance to
+            meet the robot and hear about the question behind the session.
           </figcaption>
         </figure>
 
@@ -97,8 +98,9 @@ const Teaching: NextPage = () => (
           Working with students
         </h2>
         <p className="mt-4 text-ink-soft" data-reveal data-reveal-delay="100">
-          I supervise undergraduate and master&rsquo;s researchers across the full arc of a study — designing
-          the interaction, scripting the robot, running children, and analyzing what comes back.
+          I supervise undergraduate and master&rsquo;s researchers across the full arc of a study, from
+          designing the interaction and scripting the robot through to running sessions with children and
+          making sense of the data that comes back.
         </p>
         <ul className="mt-8 space-y-4">
           {mentorship.map((item, i) => (
