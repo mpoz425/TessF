@@ -13,7 +13,6 @@ export type Publication = {
   type: PublicationType;
   /** Short plain-language finding shown under featured entries. */
   summary?: string;
-  citations?: number;
   links?: {
     doi?: string;
     pdf?: string;
@@ -71,6 +70,10 @@ export const publications: Publication[] = [
     venue:
       'Proceedings of the 2025 ACM/IEEE International Conference on Human-Robot Interaction (HRI ’25)',
     type: 'conference',
+    links: {
+      doi: 'https://doi.org/10.1109/HRI61500.2025.10973927',
+      pdf: 'https://par.nsf.gov/servlets/purl/10669107',
+    },
   },
   {
     id: 'cognition24-skeptical',
@@ -81,7 +84,10 @@ export const publications: Publication[] = [
     type: 'journal',
     summary:
       'When a robot gave inaccurate information, school-age children discounted it considerably more sharply than adults did, which suggests that skepticism toward machines is something children work out for themselves rather than something they absorb from the adults around them.',
-    links: { doi: 'https://doi.org/10.1016/j.cognition.2024.105814' },
+    links: {
+      doi: 'https://doi.org/10.1016/j.cognition.2024.105814',
+      pdf: 'https://par.nsf.gov/servlets/purl/10576147',
+    },
   },
   {
     id: 'jepg24-personal-social',
@@ -103,7 +109,10 @@ export const publications: Publication[] = [
     type: 'journal',
     summary:
       'Across Alexa, Roomba, and the NAO robot, the properties children attributed to each technology sorted into three distinct clusters, covering whether it has experiences, whether it has a mind, and whether it deserves moral treatment. Children endorsed some agent-like features for all three devices, though they did so less as they grew older.',
-    links: { doi: 'https://doi.org/10.1037/dev0001524' },
+    links: {
+      doi: 'https://doi.org/10.1037/dev0001524',
+      pdf: 'https://psycnet.apa.org/manuscript/2023-61671-001.pdf',
+    },
   },
   {
     id: 'humanamente22-agency',
@@ -114,7 +123,10 @@ export const publications: Publication[] = [
     venue: 'HUMANA.MENTE Journal of Philosophical Studies',
     detail: '15(42), 179–204',
     type: 'journal',
-    links: { doi: 'https://www.humanamente.eu/index.php/HM/article/view/415' },
+    links: {
+      doi: 'https://www.humanamente.eu/index.php/HM/article/view/415',
+      pdf: 'https://www.humanamente.eu/index.php/HM/article/download/415/328',
+    },
   },
   {
     id: 'cogsci21-constrained',
@@ -137,7 +149,10 @@ export const publications: Publication[] = [
     venue: 'Frontiers in Psychology',
     detail: '12',
     type: 'journal',
-    links: { doi: 'https://doi.org/10.3389/fpsyg.2021.715914' },
+    links: {
+      doi: 'https://doi.org/10.3389/fpsyg.2021.715914',
+      pdf: 'https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2021.715914/pdf',
+    },
   },
   {
     id: 'cogsci19-ascribe',
@@ -146,6 +161,9 @@ export const publications: Publication[] = [
     year: 2019,
     venue: 'Proceedings of the 41st Annual Conference of the Cognitive Science Society',
     type: 'conference',
+    links: {
+      pdf: 'https://escholarship.org/content/qt7jr8x5rs/qt7jr8x5rs.pdf',
+    },
   },
   {
     id: 'cogsci19-fluency',
@@ -154,40 +172,8 @@ export const publications: Publication[] = [
     year: 2019,
     venue: 'Proceedings of the 41st Annual Conference of the Cognitive Science Society',
     type: 'conference',
-  },
-];
-
-/** Work that is written up but not yet published, shown as a short list. */
-export const inProgress = [
-  {
-    title: 'Technologies in the home: A comprehensive report on children’s daily technology use',
-    authors: '**Flanagan, T.**, DeCesare, A., & Kushnir, T.',
-    status: 'Under review',
-  },
-  {
-    title: 'Would you trust a robot that makes errors? The impact of robot errors on children’s trust',
-    authors: 'Cao, X., **Flanagan, T.**, & Wang, F.',
-    status: 'Under review',
-  },
-  {
-    title: 'Children’s persistence and collaboration with mistaken robots',
-    authors: '**Flanagan, T.**, Pitts, C., Georgiou, N., Scassellati, B., & Kushnir, T.',
-    status: 'In preparation',
-  },
-  {
-    title: 'Mind perception of a cheating robot',
-    authors: '**Flanagan, T.**, Calabro, R., Leong, Y. C., & Sebo, S.',
-    status: 'In preparation',
-  },
-  {
-    title: 'Who am I collaborating with? Users’ perceptions of robots that are controlled by LLMs',
-    authors: 'Zhang, J., **Flanagan, T.**, & Sebo, S.',
-    status: 'In preparation',
-  },
-  {
-    title:
-      'Comparing the effects of robot empathy and self-disclosure on people’s rapport with a work companion robot',
-    authors: 'Lin, T., **Flanagan, T.**, Malani, U., Liang, Y. L., Mutlu, B., Michaelis, J., & Sebo, S.',
-    status: 'In preparation',
+    links: {
+      pdf: 'https://escholarship.org/content/qt7622v521/qt7622v521.pdf',
+    },
   },
 ];

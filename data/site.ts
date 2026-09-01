@@ -1,6 +1,6 @@
 export const site = {
   name: 'Teresa (Tess) Flanagan',
-  shortName: 'Tess Flanagan',
+  shortName: 'Teresa Flanagan',
   pronouns: 'she/her/hers',
   role: 'Postdoctoral Scholar',
   affiliation: 'Data Science Institute, University of Chicago',
