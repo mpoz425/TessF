@@ -1,27 +1,23 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Head, Main, NextScript } from 'next/document';
+
+/*
+ * Marks the document as JS-capable before first paint so scroll-reveal
+ * styles never hide content from users (or crawlers) without JS.
+ */
+const JS_FLAG = `document.documentElement.classList.add('js')`;
 
 export default function Document() {
   return (
-    <Html lang="en" className="h-full scroll-smooth antialiased">
+    <Html lang="en" className="scroll-smooth">
       <Head>
-        <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com"
-        />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <meta name="theme-color" content="#FCFAF6" />
+        <script dangerouslySetInnerHTML={{ __html: JS_FLAG }} />
       </Head>
-      <body className="h-full">
+      <body className="bg-paper">
         <Main />
         <NextScript />
       </body>
     </Html>
-  )
-} 
+  );
+}

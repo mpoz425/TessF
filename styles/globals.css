@@ -3,61 +3,162 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    color-scheme: light;
+  }
+
   html {
     @apply antialiased;
+    -webkit-tap-highlight-color: transparent;
   }
 
   body {
-    @apply text-gray-900;
+    @apply bg-paper font-sans text-base text-ink-soft;
+    font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-bold tracking-tight;
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display font-semibold text-ink;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* A single visible focus treatment for every interactive element. */
+  :focus-visible {
+    @apply outline-none ring-2 ring-clay ring-offset-2 ring-offset-paper rounded-sm;
+  }
+
+  ::selection {
+    @apply bg-clay-100 text-clay-800;
   }
 }
 
 @layer components {
-  .card {
-    @apply bg-white/80 backdrop-blur-sm rounded-lg shadow-sm border border-gray-200/50 
-           hover:shadow-md transition-shadow duration-200 
-           hover:border-softBlue-200/50;
+  /* ---- Layout primitives ---- */
+  .shell {
+    @apply mx-auto w-full max-w-shell px-5 sm:px-8 lg:px-12;
   }
 
-  .section-bg {
-    @apply bg-white/60 backdrop-blur-sm rounded-lg shadow-sm;
+  .section {
+    @apply py-16 sm:py-20 lg:py-28;
+  }
+
+  /* ---- Typographic primitives ---- */
+  .eyebrow {
+    @apply font-mono text-eyebrow font-medium uppercase text-clay;
+  }
+
+  .eyebrow-mute {
+    @apply font-mono text-eyebrow font-medium uppercase text-ink-mute;
+  }
+
+  .lede {
+    @apply text-lg leading-relaxed text-ink-soft sm:text-xl sm:leading-relaxed;
+  }
+
+  /* Hairline that carries the eyebrow across the column. */
+  .rule-heading {
+    @apply flex items-center gap-4 border-t border-rule pt-4;
+  }
+
+  /* ---- Links ---- */
+  .link {
+    @apply text-clay underline decoration-clay-200 decoration-1 underline-offset-4
+           transition-colors hover:decoration-clay;
+  }
+
+  .link-quiet {
+    @apply text-ink-soft transition-colors hover:text-clay;
+  }
+
+  /* ---- Buttons ---- */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5
+           text-sm font-medium transition-all duration-200;
   }
 
   .btn-primary {
-    @apply inline-flex items-center px-6 py-3 border border-transparent 
-           text-base font-medium rounded-md shadow-sm text-white
-           bg-gradient-to-r from-softBlue-500 to-softBlue-600
-           hover:from-softBlue-600 hover:to-softBlue-700
-           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-softBlue-500 
-           transition-all duration-200;
+    @apply btn bg-ink text-paper hover:bg-clay;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center px-6 py-3 border border-transparent
-           text-base font-medium rounded-md text-softBlue-700
-           bg-gradient-to-r from-softBlue-50 to-softBlue-100
-           hover:from-softBlue-100 hover:to-softBlue-200
-           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-softBlue-500
-           transition-all duration-200;
+    @apply btn border border-rule bg-transparent text-ink
+           hover:border-ink hover:bg-paper-alt;
+  }
+
+  /* ---- Surfaces ---- */
+  .card {
+    @apply rounded-card border border-rule bg-white/70 transition-all duration-300;
+  }
+
+  .card-interactive {
+    @apply card hover:-translate-y-0.5 hover:border-clay-200 hover:shadow-lift;
+  }
+
+  /* ---- Tags ---- */
+  .tag {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 font-mono text-[0.65rem]
+           font-medium uppercase tracking-wider;
+  }
+
+  .tag-clay {
+    @apply tag bg-clay-50 text-clay-700;
+  }
+
+  .tag-moss {
+    @apply tag bg-moss-50 text-moss-700;
+  }
+
+  .tag-neutral {
+    @apply tag bg-paper-deep text-ink-mute;
   }
 }
 
-/* Custom background gradients */
-.bg-soft-gradient {
-  @apply bg-gradient-to-br from-softPink-50 via-white to-softBlue-50;
+@layer utilities {
+  /* Faint grid used behind the hero and closing band. */
+  .bg-grid {
+    background-image: linear-gradient(to right, #17181b0a 1px, transparent 1px),
+      linear-gradient(to bottom, #17181b0a 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+  }
 }
 
-.bg-content-gradient {
-  @apply bg-gradient-to-r from-white/80 to-white/60 backdrop-blur-sm;
+/*
+ * Scroll reveal. Elements start hidden only when JS is available to observe
+ * them, so a no-JS render still shows all content.
+ */
+.js [data-reveal] {
+  opacity: 0;
 }
 
-/* Ensure hero image face is visible on mobile */
-@media (max-width: 640px) {
-  .hero-image {
-    object-position: center 20% !important;
+.js [data-reveal].is-visible {
+  @apply animate-reveal-up;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js [data-reveal],
+  .js [data-reveal].is-visible {
+    opacity: 1;
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
