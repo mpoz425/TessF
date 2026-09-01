@@ -25,8 +25,8 @@ npm run dev          # http://localhost:3000
 
 | Route       | Contents                                                            |
 | ----------- | ------------------------------------------------------------------- |
-| `/`         | Hero, current appointments, about, and the research themes            |
-| `/research` | The three research themes with their papers, plus forthcoming work    |
+| `/`         | Hero, current appointments, and the research themes                   |
+| `/research` | The three research themes with their papers                           |
 | `/news`     | Press coverage                                                        |
 | `/contact`  | Email, office address, and profile links                              |
 | `/cv`       | Redirects to the CV PDF                                               |
@@ -61,8 +61,7 @@ a file of the same name (or update the path and pixel dimensions).
 
 ### `data/publications.ts`
 
-Published work in `publications`, and work under review or in preparation in
-`inProgress`. A published entry looks like this:
+Published work in `publications`. A published entry looks like this:
 
 ```ts
 {
@@ -83,7 +82,7 @@ array in `data/content.ts`.
 
 ### `data/content.ts`
 
-Research themes, the positions and education timelines, awards, methods, and the
+Research themes, positions and education (kept for reference), awards, methods, and the
 `press` items that fill the In the News page.
 
 ## Design system

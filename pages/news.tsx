@@ -13,7 +13,7 @@ const News: NextPage = () => (
     <PageHeader
       eyebrow="In the News"
       title="Press coverage"
-      lede="Writing about the research in the Wall Street Journal, Cosmos, WUNC, and elsewhere, mostly on what children make of the smart devices already in their homes."
+      lede="My research has been featured in The Wall Street Journal, Cosmos Magazine, WUNC, and Duke Today. Below are some select featured articles and interviews."
     />
 
     <section className="section">

@@ -62,7 +62,7 @@ export default function PageHeader({ eyebrow, title, lede, figure, children }: P
                 />
               </div>
               {figure.caption && (
-                <figcaption className="mt-3 font-mono text-[0.65rem] uppercase tracking-wider text-ink-faint">
+                <figcaption className="mt-3 max-w-sm text-sm leading-relaxed text-ink-mute">
                   {figure.caption}
                 </figcaption>
               )}

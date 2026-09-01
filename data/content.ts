@@ -14,7 +14,7 @@ export const researchThemes: ResearchTheme[] = [
     index: '01',
     title: 'Theories of machines',
     question: 'What kind of thing do we take a robot to be?',
-    body: 'Well before anyone sits them down to explain it, children arrive at working theories about what the technologies around them can feel, know, and want, and those theories turn out to be a good deal more structured than a single judgment about whether something is alive. Across smart speakers, robot vacuums, and humanoid robots, the properties people attribute separate into distinct clusters covering whether a machine has experiences, whether it has a mind, and whether it deserves moral treatment. This is also the point at which the work runs closest to philosophy, since longstanding questions about choice, free will, and moral standing become empirically tractable once you are able to ask a child whether a robot could have acted otherwise, and whether it should be held responsible when it does something wrong.',
+    body: 'I study the beliefs children and adults hold about what machines can feel, know, choose, and deserve. Those ideas are more structured than a simple verdict about whether a robot is alive, and they change with age, experience, and the kind of machine someone encounters.',
     related: [
       'devpsych23-minds',
       'cogsci21-constrained',
@@ -28,7 +28,7 @@ export const researchThemes: ResearchTheme[] = [
     index: '02',
     title: 'Engagement with machines',
     question: 'How do we come to trust and connect with robots?',
-    body: 'Believing something about a machine and acting on that belief are not quite the same thing, and this strand of the work follows what happens once an interaction is actually underway. On the question of trust, I look at the cues people use to discount a robot that has given them bad information, and at the way that skepticism shifts across the school years in ways that set children apart from adults presented with the same errors. On the question of connection, controlled interaction studies let me isolate the small behavioral moments that leave a child feeling close to a robot, such as being asked for help rather than simply being told that something has gone wrong, which matters a great deal for the robots now being placed in classrooms.',
+    body: 'I also study what happens once an interaction is underway: whether people trust a robot, feel connected to it, or want to keep engaging. Children do not simply scale down the adult response; their trust and connection follow a developmental path of their own.',
     related: ['cognition24-skeptical', 'hri26-help', 'chapter-empathetic-ai'],
   },
   {
@@ -36,7 +36,7 @@ export const researchThemes: ResearchTheme[] = [
     index: '03',
     title: 'Social cognitive development',
     question: 'How do we come to understand other minds at all?',
-    body: 'Not all of my work involves technology. A parallel line of research asks how children come to reason about explanation, evidence, and other people, which is the foundation that any account of how they think about machines has to rest on. That has included children’s conviction that events must have explanations in the first place, the relationship between counterfactual fluency and judgments of free will, and cross-cultural work with preschoolers in the United States and China on how statistical evidence is used rather differently depending on whether the knowledge at stake is personal or social.',
+    body: 'Not all of this work is about technology. I also study how children reason about explanation, evidence, and other minds, which is the foundation for the questions I ask about machines.',
     related: ['jecp25-butwhy', 'jepg24-personal-social', 'cogsci19-fluency'],
   },
 ];
