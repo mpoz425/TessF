@@ -21,15 +21,27 @@ const NotFound: NextPage = () => (
         >
           Home
         </Link>
-        {nav.map((item) => (
-          <Link
-            key={item.href}
-            href={item.href}
-            className="rounded-full border border-rule px-4 py-1.5 text-sm text-ink-soft transition-colors hover:border-clay-200 hover:text-clay"
-          >
-            {item.name}
-          </Link>
-        ))}
+        {nav.map((item) =>
+          item.external ? (
+            <a
+              key={item.href}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-rule px-4 py-1.5 text-sm text-ink-soft transition-colors hover:border-clay-200 hover:text-clay"
+            >
+              {item.name}
+            </a>
+          ) : (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="rounded-full border border-rule px-4 py-1.5 text-sm text-ink-soft transition-colors hover:border-clay-200 hover:text-clay"
+            >
+              {item.name}
+            </Link>
+          )
+        )}
       </nav>
       <Link href="/" className="btn-primary mt-10">
         Back to the home page

@@ -21,49 +21,77 @@ npm run dev          # http://localhost:3000
 | `npm run lint`      | ESLint via `next lint`                                       |
 | `npm run typecheck` | TypeScript with no emit                                      |
 
+## Pages
+
+| Route       | Contents                                                            |
+| ----------- | ------------------------------------------------------------------- |
+| `/`         | Hero, current appointments, about, and the research themes            |
+| `/research` | The three research themes with their papers, plus forthcoming work    |
+| `/news`     | Press coverage                                                        |
+| `/contact`  | Email, office address, and profile links                              |
+| `/cv`       | Redirects to the CV PDF                                               |
+
+## Updating the CV
+
+The CV is served as a plain PDF rather than a rendered page. To update it, replace
+`public/Teresa_Flanagan_CV.pdf` with the new file, keeping the same filename. Nothing
+else needs to change; the navigation, the hero button, and the `/cv` redirect all
+point at that path via `site.cvPath`.
+
+Note that the PDF is publicly downloadable exactly as supplied, including any contact
+details printed on it.
+
 ## Editing content
 
-Nothing that changes regularly lives in a page component. To update the site,
-edit one of three typed data files and the change propagates everywhere it appears.
+Nothing that changes regularly lives in a page component. To update the site, edit one
+of three typed data files and the change propagates everywhere it appears.
 
 ### `data/site.ts`
 
-Name, role, affiliation, email, canonical URL, the primary navigation, external
-profile links, and the three "currently" facts under the hero.
+Name, role, affiliation, email, canonical URL, the SEBO Lab link, the primary
+navigation, external profile links, and the three "currently" facts under the hero.
+
+Navigation entries take an optional `external: true`, which renders them as a plain
+link that opens in a new tab. The CV uses this to point at the PDF.
+
+**Contact photo.** `site.contactPhoto` is `null` by default and the contact page simply
+omits the image. To add one, drop the file into `public/images/` and set:
+
+```ts
+contactPhoto: {
+  src: '/images/tess-misty.jpg',
+  alt: 'Tess with Misty the robot',
+  width: 1200,   // the file's real pixel dimensions
+  height: 900,
+},
+```
 
 ### `data/publications.ts`
 
-The full publication list. Each entry looks like this:
+Published work in `publications`, and work under review or in preparation in
+`inProgress`. A published entry looks like this:
 
 ```ts
 {
-  id: 'hri26-help',                       // unique, also used to link from research themes
-  title: 'Can You Help Me? ...',
-  authors: '**Flanagan, T.**, Zhang, J. C., ...',  // ** ** bolds your name automatically
-  year: 2026,
-  venue: 'Proceedings of the 21st ACM/IEEE ...',
-  detail: 'pp. 465–474',                  // optional volume/issue/pages
-  type: 'conference',                     // journal | conference | chapter | dissertation | thesis
-  citations: 19,                          // optional
-  award: 'Best Paper',                    // optional, renders a badge
-  featured: true,                         // optional, promotes it to the home page
-  summary: 'Plain-language finding ...',  // shown on featured entries only
+  id: 'hri26-help',                       // unique, used to link from research themes
+  title: 'Can you help me? ...',
+  authors: '**Flanagan, T.**, Zhang, J., ...',  // ** ** bolds your name automatically
+  year: 2026,                             // a number, or the string 'in press'
+  venue: 'Proceedings of the 2026 ACM/IEEE ...',
+  detail: '15(42), 179–204',              // optional volume/issue/pages
+  type: 'journal',                        // journal | conference | chapter
+  summary: 'Plain-language finding ...',  // optional
   links: { doi: '...', pdf: '...', code: '...', osf: '...' },  // all optional
 }
 ```
 
-Adding a paper to the top of the array is all that is required, since the CV page and
-its year grouping derive from this list. Set `featured: true` on the papers that
-should appear on the home page, and reference a paper's `id` from a research theme to
-surface it on the research page.
+A paper appears on the research page by having its `id` listed in a theme's `related`
+array in `data/content.ts`.
 
 ### `data/content.ts`
 
-Research themes, the positions and education timelines, awards, teaching, outreach,
-methods, and the news items on the home page.
-
-Research themes reference publications by `id` through their `related` array, so a
-paper added to `publications.ts` can be surfaced under a theme without duplicating it.
+Research themes, the positions and education timelines, awards, methods, and the
+`press` items that fill the In the News page.
 
 ## Design system
 
@@ -78,8 +106,9 @@ Tokens live in `tailwind.config.js`; component classes live in `styles/globals.c
 
 Add `data-reveal` to any element to have it fade in on scroll, and
 `data-reveal-delay="80"` to stagger it. The hiding styles are gated behind a `js`
-class, so content is never hidden from crawlers or users without JavaScript, and the
-whole effect is disabled under `prefers-reduced-motion`.
+class and backed by a failsafe timer, so content is never hidden from crawlers, from
+users without JavaScript, or when hydration fails. The effect is disabled entirely
+under `prefers-reduced-motion`.
 
 ## Images
 

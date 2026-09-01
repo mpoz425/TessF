@@ -47,7 +47,7 @@ export default function Hero() {
               Data Science Institute
             </a>{' '}
             at the University of Chicago, working in the{' '}
-            <a href="http://hri.cs.uchicago.edu/" target="_blank" rel="noopener noreferrer" className="link">
+            <a href={site.labUrl} target="_blank" rel="noopener noreferrer" className="link">
               SEBO Lab
             </a>
             . My research explores whether we apply our social cognitive mechanisms with robots and artificial
@@ -60,9 +60,14 @@ export default function Hero() {
               Read the research
               <Icon name="arrow-right" className="h-4 w-4" />
             </Link>
-            <Link href="/cv" className="btn-secondary">
+            <a
+              href={site.cvPath}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary"
+            >
               Curriculum vitae
-            </Link>
+            </a>
           </div>
 
           <ul
@@ -104,32 +109,10 @@ export default function Hero() {
                 width={400}
                 height={400}
                 priority
-                sizes="(min-width: 1024px) 22rem, (min-width: 640px) 22rem, 80vw"
+                sizes="(min-width: 640px) 22rem, 80vw"
                 className="h-auto w-full"
               />
             </div>
-
-            {/*
-              Field photo inset — small on purpose, like a pinned print. The
-              rotation widens its bounding box, so the mobile offset stays well
-              inside the shell padding to avoid horizontal overflow.
-            */}
-            <div className="absolute -bottom-10 -left-1 w-32 rotate-[-4deg] sm:-left-10 sm:w-44">
-              <div className="rounded-lg border border-rule bg-white p-1.5 shadow-lift-lg">
-                <Image
-                  src="/images/tess-museum-aibo.jpg"
-                  alt="Tess running a study with a child and a robot dog at a science museum"
-                  width={185}
-                  height={123}
-                  sizes="(min-width: 640px) 11rem, 9rem"
-                  className="h-auto w-full rounded"
-                />
-              </div>
-            </div>
-
-            <figcaption className="mt-16 text-right font-mono text-[0.65rem] uppercase tracking-wider text-ink-faint sm:mt-14">
-              Collecting data in the field
-            </figcaption>
           </figure>
         </div>
       </div>

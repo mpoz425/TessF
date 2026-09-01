@@ -32,9 +32,20 @@ export default function Footer() {
               </li>
               {nav.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="link-quiet">
-                    {item.name}
-                  </Link>
+                  {item.external ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-quiet"
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <Link href={item.href} className="link-quiet">
+                      {item.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

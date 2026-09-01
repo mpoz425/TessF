@@ -19,12 +19,15 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // Paths the site has previously exposed. Publications now live under the
-      // research themes and in full on the CV, and teaching is a CV section.
+      // Paths the site has previously exposed. Publications now sit under the
+      // research themes, the CV is a downloadable PDF, and the about content
+      // has moved onto the home page.
       { source: '/research-areas', destination: '/research', permanent: true },
       { source: '/papers', destination: '/research', permanent: true },
       { source: '/publications', destination: '/research', permanent: true },
-      { source: '/teaching', destination: '/cv', permanent: true },
+      { source: '/teaching', destination: '/research', permanent: true },
+      { source: '/about', destination: '/', permanent: true },
+      { source: '/cv', destination: '/Teresa_Flanagan_CV.pdf', permanent: true },
     ];
   },
 };

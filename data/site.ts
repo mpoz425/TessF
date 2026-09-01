@@ -1,22 +1,31 @@
 export const site = {
   name: 'Teresa (Tess) Flanagan',
   shortName: 'Tess Flanagan',
-  pronouns: 'she/her',
+  pronouns: 'she/her/hers',
   role: 'Postdoctoral Scholar',
   affiliation: 'Data Science Institute, University of Chicago',
   url: 'https://tessflanagan.com',
   email: 'tflanagan2@uchicago.edu',
-  cvPath: '/cv',
+  /** Served straight from public/ — deliberately a PDF, not a rendered page. */
+  cvPath: '/Teresa_Flanagan_CV.pdf',
+  labUrl: 'https://sebo-hri-lab.github.io/index.html',
   description:
     'Teresa (Tess) Flanagan is a developmental psychologist and postdoctoral scholar at the Data Science Institute at the University of Chicago, where she studies how children and adults think about and engage with interactive technologies, and whether we apply our social cognitive mechanisms with robots and artificial intelligence.',
+  /**
+   * Photo shown on the contact page. Drop the file into public/images/ and set
+   * the path here to enable it.
+   */
+  contactPhoto: null as { src: string; alt: string; width: number; height: number } | null,
 } as const;
 
-export const nav = [
-  { name: 'About', href: '/about' },
+export type NavItem = { name: string; href: string; external?: boolean };
+
+export const nav: NavItem[] = [
   { name: 'Research', href: '/research' },
-  { name: 'CV', href: '/cv' },
+  { name: 'In the News', href: '/news' },
+  { name: 'CV', href: site.cvPath, external: true },
   { name: 'Contact', href: '/contact' },
-] as const;
+];
 
 export type SocialLink = {
   name: string;
@@ -59,7 +68,7 @@ export const currently = [
     label: 'Lab',
     value: 'SEBO Lab',
     detail: 'with Dr. Sarah Sebo',
-    href: 'http://hri.cs.uchicago.edu/',
+    href: site.labUrl,
   },
   {
     label: 'Doctorate',
