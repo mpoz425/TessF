@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="shell relative grid gap-14 py-16 sm:py-20 lg:grid-cols-12 lg:gap-16 lg:py-28">
         <div className="lg:col-span-7 xl:col-span-7">
           <p className="eyebrow" data-reveal>
-            Developmental Psychology · Human–Robot Interaction
+            Developmental Psychology · Cognitive Science · Human–Robot Interaction
           </p>
 
           <h1
@@ -33,7 +33,7 @@ export default function Hero() {
             data-reveal
             data-reveal-delay="120"
           >
-            I study how children come to understand the machines they are growing up alongside.
+            I study how children and adults think of and engage with interactive technologies.
           </p>
 
           <p className="mt-6 max-w-prose leading-relaxed text-ink-soft" data-reveal data-reveal-delay="180">
@@ -48,11 +48,11 @@ export default function Hero() {
             </a>{' '}
             at the University of Chicago, working in the{' '}
             <a href="http://hri.cs.uchicago.edu/" target="_blank" rel="noopener noreferrer" className="link">
-              Human–Robot Interaction Lab
+              SEBO Lab
             </a>
-            . My research asks what children believe robots and artificial intelligence are able to think,
-            feel, choose, and deserve, and how those beliefs ought to inform the way such systems are designed
-            for the children who will use them.
+            . My research explores whether we apply our social cognitive mechanisms with robots and artificial
+            intelligence, and what the answer to that question ought to mean for the people designing the
+            systems that children and adults now encounter every day.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-3" data-reveal data-reveal-delay="240">

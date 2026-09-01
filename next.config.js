@@ -19,9 +19,12 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // The previous site exposed research under these paths.
+      // Paths the site has previously exposed. Publications now live under the
+      // research themes and in full on the CV, and teaching is a CV section.
       { source: '/research-areas', destination: '/research', permanent: true },
-      { source: '/papers', destination: '/publications', permanent: true },
+      { source: '/papers', destination: '/research', permanent: true },
+      { source: '/publications', destination: '/research', permanent: true },
+      { source: '/teaching', destination: '/cv', permanent: true },
     ];
   },
 };

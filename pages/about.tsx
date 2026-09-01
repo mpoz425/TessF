@@ -27,7 +27,7 @@ const About: NextPage = () => (
           <div className="prose prose-lg" data-reveal>
             <p>
               I am a postdoctoral scholar at the Data Science Institute at the University of Chicago, where I
-              work in Dr. Sarah Sebo&rsquo;s Human–Robot Interaction Lab. My research sits along the seam
+              work in the SEBO Lab with Dr. Sarah Sebo. My research sits along the seam
               between developmental psychology and robotics, and it is concerned with what children believe
               about the technologies around them and how those beliefs shape whether they go on to trust
               machines, learn from them, or become attached to them.

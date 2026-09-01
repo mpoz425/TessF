@@ -11,12 +11,12 @@ export default function ResearchPreview() {
         <SectionHeading
           eyebrow="Research"
           title="The questions I keep returning to"
-          lede="Children are forming beliefs about the technologies around them rather more quickly than developmental science has managed to document, and the areas below describe where I have concentrated that work."
+          lede="Children and adults alike are forming beliefs about the technologies around them rather more quickly than developmental science has managed to document, and the areas below describe where I have concentrated that work."
           action={{ label: 'All research areas', href: '/research' }}
         />
 
-        <ul className="grid gap-px overflow-hidden rounded-card border border-rule bg-rule sm:grid-cols-2">
-          {researchThemes.slice(0, 4).map((theme, i) => (
+        <ul className="grid gap-px overflow-hidden rounded-card border border-rule bg-rule lg:grid-cols-3">
+          {researchThemes.map((theme, i) => (
             <li key={theme.id} data-reveal data-reveal-delay={i * 70}>
               <Link
                 href={`/research#${theme.id}`}

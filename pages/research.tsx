@@ -19,12 +19,12 @@ const relatedTo = (ids: string[]): Publication[] =>
 const Research: NextPage = () => (
   <Layout
     title="Research"
-    description="Research on children's theories of machine minds, trust in robots, child–robot connection, agency and moral standing, and new instruments for developmental science."
+    description="Research on how children and adults think of interactive technologies as agents, how they come to trust and connect with robots, and the social cognitive development that underlies both."
   >
     <PageHeader
       eyebrow="Research"
-      title="What children believe about machines, and why it matters"
-      lede="Children today are the first generation for whom genuinely interactive technology is simply part of the ordinary furniture of the house, and my work asks how growing up in that setting changes the concepts they build about minds, about choice, and about who or what ends up counting as an agent."
+      title="What we think of machines and how we engage with them"
+      lede="We are surrounded by interactive technologies that look, move, and act like agents. My work looks at how we think of and engage with these technologies as agents."
     >
       <nav aria-label="Research areas" className="flex flex-wrap gap-2">
         {researchThemes.map((theme) => (

@@ -10,44 +10,34 @@ export type ResearchTheme = {
 
 export const researchThemes: ResearchTheme[] = [
   {
-    id: 'machine-minds',
+    id: 'theories-of-machines',
     index: '01',
-    title: 'Children’s theories of machine minds',
-    question: 'What does a child think is going on inside a robot?',
-    body: 'Well before anyone sits them down to explain it, children arrive at working theories about what the technologies around them can feel, know, and want. I map those theories across the devices children actually encounter, including smart speakers, robot vacuums, and humanoid robots, and follow how they are reorganized over the course of development. What emerges is not a single judgment about whether a thing is alive, but a set of separable beliefs about whether it has experiences, whether it has a mind, and whether it deserves moral treatment, each of which appears to develop on its own timeline.',
-    related: ['devpsych23-minds', 'humanamente22-agency'],
+    title: 'Theories of machines',
+    question: 'What kind of thing do we take a robot to be?',
+    body: 'Well before anyone sits them down to explain it, children arrive at working theories about what the technologies around them can feel, know, and want, and those theories turn out to be a good deal more structured than a single judgment about whether something is alive. Across smart speakers, robot vacuums, and humanoid robots, the properties people attribute separate into distinct clusters covering whether a machine has experiences, whether it has a mind, and whether it deserves moral treatment. This is also the point at which the work runs closest to philosophy, since longstanding questions about choice, free will, and moral standing become empirically tractable once you are able to ask a child whether a robot could have acted otherwise, and whether it should be held responsible when it does something wrong.',
+    related: [
+      'devpsych23-minds',
+      'cogsci21-constrained',
+      'hri25-morality',
+      'humanamente22-agency',
+      'cogsci19-ascribe',
+    ],
   },
   {
-    id: 'trust',
+    id: 'engagement-with-machines',
     index: '02',
-    title: 'Trust, testimony, and skepticism',
-    question: 'When should a child believe a machine?',
-    body: 'Children are increasingly learning from systems that sound confident and fluent even when they happen to be wrong, which raises the question of how they go about calibrating their trust. I look at the cues they use to discount an unreliable robot, at the way that skepticism shifts across the school years, and at the points where children respond rather differently from adults who have been shown the same errors.',
-    related: ['cognition24-skeptical'],
+    title: 'Engagement with machines',
+    question: 'How do we come to trust and connect with robots?',
+    body: 'Believing something about a machine and acting on that belief are not quite the same thing, and this strand of the work follows what happens once an interaction is actually underway. On the question of trust, I look at the cues people use to discount a robot that has given them bad information, and at the way that skepticism shifts across the school years in ways that set children apart from adults presented with the same errors. On the question of connection, controlled interaction studies let me isolate the small behavioral moments that leave a child feeling close to a robot, such as being asked for help rather than simply being told that something has gone wrong, which matters a great deal for the robots now being placed in classrooms.',
+    related: ['cognition24-skeptical', 'hri26-help'],
   },
   {
-    id: 'connection',
+    id: 'social-cognitive-development',
     index: '03',
-    title: 'Connection and vulnerability in child–robot interaction',
-    question: 'What makes a child feel close to a robot?',
-    body: 'Whatever relationship a child forms with a robot is assembled out of small behavioral moments, and controlled interaction studies let me isolate which of those moments matter. Asking a child for help rather than simply reporting a problem turns out to make a measurable difference, as does expressing something that reads as feeling rather than as malfunction. My interest is in what findings like these imply for the design of robots that children may end up spending a good deal of time with in classrooms.',
-    related: ['hri26-help'],
-  },
-  {
-    id: 'agency',
-    index: '04',
-    title: 'Choice, free will, and moral standing',
-    question: 'Who gets to count as an agent?',
-    body: 'My work on agency runs in two directions at once, taking in both how children come to believe in their own capacity to choose and how far they are willing to extend that capacity to others, machines included. This is the point at which developmental psychology meets philosophy most directly, and where longstanding questions about explanation, sufficient reason, and moral responsibility can be turned into something that is genuinely testable with four-year-olds.',
-    related: ['cogsci21-constrained', 'hri25-morality', 'jecp25-butwhy', 'cogsci23-psr', 'cogsci19-fluency'],
-  },
-  {
-    id: 'methods',
-    index: '05',
-    title: 'New instruments for developmental science',
-    question: 'Can the technologies we study also help us study children?',
-    body: 'Developmental data tends to be slow and costly to collect, and it is often drawn from a narrower range of families than we would like. At the Data Science Institute I have been working on the other side of that problem, treating robots and AI systems as instruments for research rather than only as objects of study, and helping build the kind of community-engaged infrastructure, in museums, schools, and public science spaces, that widens who is able to take part in the first place.',
-    related: ['frontiers21-cel'],
+    title: 'Social cognitive development',
+    question: 'How do we come to understand other minds at all?',
+    body: 'Not all of my work involves technology. A parallel line of research asks how children come to reason about explanation, evidence, and other people, which is the foundation that any account of how they think about machines has to rest on. That has included children’s conviction that events must have explanations in the first place, the relationship between fluency in generating ideas and children’s confidence in their own free will, and cross-cultural work with preschoolers in the United States and China on how statistical evidence is used rather differently depending on whether the knowledge at stake is personal or social.',
+    related: ['jecp25-butwhy', 'cogsci23-psr', 'jepg24-personal-social', 'cogsci19-fluency'],
   },
 ];
 
@@ -67,7 +57,7 @@ export const positions: TimelineEntry[] = [
     location: 'Chicago, IL',
     period: 'Sept 2024 — Present',
     detail: [
-      'Human–Robot Interaction Lab with Dr. Sarah Sebo',
+      'SEBO Lab with Dr. Sarah Sebo',
       'Child–robot interaction, social development, and robot trust',
     ],
     href: 'https://datascience.uchicago.edu/people/teresa-flanagan/',
@@ -150,12 +140,6 @@ export const teaching = [
   },
 ];
 
-export const mentorship = [
-  'Undergraduate and master’s researchers in the UChicago Human–Robot Interaction Lab, working on study design, robot scripting, and analysis',
-  'Research assistants at Cornell’s Early Childhood Cognition Lab, across museum, laboratory, and online data collection',
-  'First-generation and underrepresented students thinking through research experience and graduate applications',
-];
-
 export const outreach = [
   {
     title: 'Museum-based developmental science',
@@ -198,7 +182,7 @@ export const news: NewsItem[] = [
   },
   {
     date: 'Sept 2024',
-    body: 'I joined the Data Science Institute at the University of Chicago as a postdoctoral scholar, working in Sarah Sebo’s Human–Robot Interaction Lab.',
+    body: 'I joined the Data Science Institute at the University of Chicago as a postdoctoral scholar, working in the SEBO Lab with Sarah Sebo.',
     href: 'https://datascience.uchicago.edu/people/teresa-flanagan/',
   },
 ];

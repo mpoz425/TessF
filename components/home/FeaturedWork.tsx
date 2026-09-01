@@ -11,7 +11,7 @@ export default function FeaturedWork() {
           eyebrow="Selected work"
           title="Some of what the studies have found"
           lede="These papers give a reasonable sense of the overall direction of the work. Each is summarized here in plain language, with data and code linked wherever they are publicly available."
-          action={{ label: 'All publications', href: '/publications' }}
+          action={{ label: 'Full publication list', href: '/cv' }}
         />
 
         <div className="grid gap-6 lg:grid-cols-2">

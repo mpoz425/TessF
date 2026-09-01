@@ -8,14 +8,12 @@ export const site = {
   email: 'tflanagan2@uchicago.edu',
   cvPath: '/cv',
   description:
-    'Teresa (Tess) Flanagan is a developmental psychologist and postdoctoral scholar at the Data Science Institute at the University of Chicago, where she studies how children reason about, learn from, and form connections with robots and artificial intelligence.',
+    'Teresa (Tess) Flanagan is a developmental psychologist and postdoctoral scholar at the Data Science Institute at the University of Chicago, where she studies how children and adults think about and engage with interactive technologies, and whether we apply our social cognitive mechanisms with robots and artificial intelligence.',
 } as const;
 
 export const nav = [
   { name: 'About', href: '/about' },
   { name: 'Research', href: '/research' },
-  { name: 'Publications', href: '/publications' },
-  { name: 'Teaching', href: '/teaching' },
   { name: 'CV', href: '/cv' },
   { name: 'Contact', href: '/contact' },
 ] as const;
@@ -59,13 +57,13 @@ export const currently = [
   },
   {
     label: 'Lab',
-    value: 'Human–Robot Interaction Lab',
+    value: 'SEBO Lab',
     detail: 'with Dr. Sarah Sebo',
     href: 'http://hri.cs.uchicago.edu/',
   },
   {
     label: 'Doctorate',
     value: 'Ph.D. Developmental Psychology',
-    detail: 'Cornell University, 2024',
+    detail: 'Cornell University, 2023',
   },
 ];
