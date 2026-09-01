@@ -9,7 +9,7 @@ import { site, socials } from '../data/site';
 const Contact: NextPage = () => (
   <Layout
     title="Contact"
-    description="Get in touch with Tess Flanagan about research, collaborations, talks, or taking part in a study."
+    description="Email Tess Flanagan about research, collaborations, talks, or taking part in a study."
   >
     <PageHeader title="Contact" lede="Email is the best way to reach me.">
       <a href={`mailto:${site.email}`} className="btn-primary text-base">

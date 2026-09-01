@@ -11,11 +11,12 @@ export const site = {
   labUrl: 'https://sebo-hri-lab.github.io/index.html',
   description:
     'Teresa (Tess) Flanagan is a developmental psychologist and postdoctoral scholar at the Data Science Institute at the University of Chicago, where she studies how children and adults think about and engage with interactive technologies, and whether we apply our social cognitive mechanisms with robots and artificial intelligence.',
-  /**
-   * Photo shown on the contact page. Drop the file into public/images/ and set
-   * the path here to enable it.
-   */
-  contactPhoto: null as { src: string; alt: string; width: number; height: number } | null,
+  contactPhoto: {
+    src: '/images/tess-portrait.jpg',
+    alt: 'Tess Flanagan beside a humanoid robot at her desk',
+    width: 400,
+    height: 400,
+  },
 } as const;
 
 export type NavItem = { name: string; href: string; external?: boolean };

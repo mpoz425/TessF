@@ -93,7 +93,7 @@ export default function Hero() {
 
         <div className="lg:col-span-5 xl:col-span-5">
           <figure
-            className="relative mx-auto w-full max-w-[22rem] lg:ml-auto lg:mr-0"
+            className="relative mx-auto w-full max-w-md lg:ml-auto lg:mr-0 lg:max-w-none"
             data-reveal
             data-reveal-delay="150"
           >
@@ -104,12 +104,12 @@ export default function Hero() {
             />
             <div className="relative overflow-hidden rounded-card border border-rule bg-paper-alt shadow-lift">
               <Image
-                src="/images/tess-portrait.jpg"
-                alt="Tess Flanagan beside a NAO humanoid robot at her desk"
-                width={400}
-                height={400}
+                src="/images/tess-speaking.jpg"
+                alt="Tess Flanagan presenting research on children's engagement with interactive technologies"
+                width={1136}
+                height={1026}
                 priority
-                sizes="(min-width: 640px) 22rem, 80vw"
+                sizes="(min-width: 1024px) 28rem, 80vw"
                 className="h-auto w-full"
               />
             </div>
