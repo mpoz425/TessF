@@ -104,10 +104,10 @@ export default function Hero() {
             />
             <div className="relative overflow-hidden rounded-card border border-rule bg-paper-alt shadow-lift">
               <Image
-                src="/images/tess-speaking.jpg"
-                alt="Tess Flanagan presenting research on children's engagement with interactive technologies"
-                width={1136}
-                height={1026}
+                src={site.homePhoto.src}
+                alt={site.homePhoto.alt}
+                width={site.homePhoto.width}
+                height={site.homePhoto.height}
                 priority
                 sizes="(min-width: 1024px) 28rem, 80vw"
                 className="h-auto w-full"

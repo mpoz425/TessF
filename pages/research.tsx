@@ -25,10 +25,10 @@ const Research: NextPage = () => (
       title="What we think of machines and how we engage with them"
       lede="We are surrounded by interactive technologies that look, move, and act like agents. My work looks at how we think of and engage with these technologies as agents."
       figure={{
-        src: '/images/tess-museum-aibo.jpg',
+        src: '/images/tess-misty-child.jpg',
         alt: 'Tess observing a child interact with a Misty robot during a study',
-        width: 185,
-        height: 123,
+        width: 1800,
+        height: 1202,
         caption: 'A child meeting Misty, the kind of first encounter my research is built around.',
       }}
     >

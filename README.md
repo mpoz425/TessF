@@ -54,10 +54,11 @@ navigation, external profile links, and the three "currently" facts under the he
 Navigation entries take an optional `external: true`, which renders them as a plain
 link that opens in a new tab. The CV uses this to point at the PDF.
 
-**Photos.** The home page uses `public/images/tess-speaking.jpg`. The research
-page heading uses `tess-museum-aibo.jpg`. The contact page uses `tess-portrait.jpg`,
-configured as `site.contactPhoto` in `data/site.ts`. To replace any of them, drop in
-a file of the same name (or update the path and pixel dimensions).
+**Photos.** The home page uses `public/images/tess-portrait.jpg`, configured as
+`site.homePhoto`. The contact page uses `tess-holding-misty.jpg` as
+`site.contactPhoto`. The research page heading uses `tess-misty-child.jpg`. To
+replace any of them, drop in a file of the same name (or update the path and
+pixel dimensions).
 
 ### `data/publications.ts`
 
