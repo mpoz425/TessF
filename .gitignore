@@ -91,3 +91,5 @@ temp/
 
 # local design reference material (not part of the site)
 /design-refs/
+/qa/
+/qa2/

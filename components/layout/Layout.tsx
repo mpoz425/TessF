@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Header from './Header';
 import Footer from './Footer';
 import Seo from '../Seo';
@@ -13,10 +14,22 @@ type LayoutProps = {
 /**
  * Reveals `[data-reveal]` elements as they scroll into view. The CSS that hides
  * them is gated on a `.js` class, so this is purely additive.
+ *
+ * Re-runs on navigation, since a client-side route change swaps in elements the
+ * previous observer never saw. Cancels the failsafe timer set in _document so
+ * that content is only ever force-shown when this never runs at all.
  */
-function useScrollReveal() {
+function useScrollReveal(routeKey: string) {
   useEffect(() => {
-    const targets = Array.from(document.querySelectorAll<HTMLElement>('[data-reveal]'));
+    const w = window as Window & { __revealFailsafe?: ReturnType<typeof setTimeout> };
+    if (w.__revealFailsafe) {
+      clearTimeout(w.__revealFailsafe);
+      w.__revealFailsafe = undefined;
+    }
+
+    const targets = Array.from(document.querySelectorAll<HTMLElement>('[data-reveal]')).filter(
+      (el) => !el.classList.contains('is-visible')
+    );
     if (!targets.length) return;
 
     if (!('IntersectionObserver' in window)) {
@@ -40,11 +53,12 @@ function useScrollReveal() {
 
     targets.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
-  }, []);
+  }, [routeKey]);
 }
 
 export default function Layout({ children, title, description, structuredData }: LayoutProps) {
-  useScrollReveal();
+  const { asPath } = useRouter();
+  useScrollReveal(asPath);
 
   return (
     <>
